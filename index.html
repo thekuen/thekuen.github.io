@@ -200,7 +200,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-11-29 09:33:41 / 修改時間：13:08:35" itemprop="dateCreated datePublished" datetime="2023-11-29T09:33:41+08:00">2023-11-29</time>
+      <time title="創建時間：2023-11-29 09:33:41 / 修改時間：15:25:29" itemprop="dateCreated datePublished" datetime="2023-11-29T09:33:41+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -223,19 +223,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><strong>預檢請求(Preflight Request)</strong><br>如果發出的請求不是簡單請求(不符合簡單請求的條件，譬如HTTP方法是PUT、DELETE)<br>跨站請求可能會攜帶使用者資料，這時候CORS會要求，必須進行預檢請求。</p>
-<ul>
-<li><p>預檢請求第一步<br><img src="https://ithelp.ithome.com.tw/upload/images/20230927/20162681c99HlUohIX.png" alt="https://ithelp.ithome.com.tw/upload/images/20230927/20162681c99HlUohIX.png"><br>可以想像成事先向Server端知會，等一下有個簡單請求，讓Server端看看</p>
-</li>
-<li><p>預檢請求第二步<br><img src="https://ithelp.ithome.com.tw/upload/images/20230927/20162681VK9ChrBDNq.png" alt="https://ithelp.ithome.com.tw/upload/images/20230927/20162681VK9ChrBDNq.png"><br>如果Server端接受了<br>這時候!!<br>瀏覽器才會送出真正的請求，如上圖<br>這個發出的請求，方法是POST<br>接著，Server端給一個回應(response)，接受<code>http://foo.example</code>的跨域請求<br>Access-Control-Allow-Origin: <a target="_blank" rel="noopener" href="http://foo.example/">http://foo.example</a></p>
-</li>
-</ul>
-<p><strong>Client端</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS /resources/post-here/ HTTP/1.1</span><br><span class="line">Host: bar.other</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-us,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip,deflate</span><br><span class="line">Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Origin: http://foo.example</span><br><span class="line">Access-Control-Request-Method: POST</span><br><span class="line">Access-Control-Request-Headers: X-PINGOTHER, Content-Type</span><br></pre></td></tr></table></figure>
-<p>第一行說明方法是OPTIONS，OPTIONS 是一個 HTTP&#x2F;1.1 方法，這個方法用來確認來自伺服器進一步的資訊<br>最底下2行告訴Server端，實際要送出的請求是POST，Headers是X-PINGOTHER</p>
-<p><strong>Server端</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Mon, 01 Dec 2008 01:15:39 GMT</span><br><span class="line">Server: Apache/2.0.61 (Unix)</span><br><span class="line">Access-Control-Allow-Origin: http://foo.example</span><br><span class="line">Access-Control-Allow-Methods: POST, GET, OPTIONS</span><br><span class="line">Access-Control-Allow-Headers: X-PINGOTHER, Content-Type</span><br><span class="line">Access-Control-Max-Age: 86400</span><br><span class="line">Vary: Accept-Encoding, Origin</span><br><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Length: 0</span><br><span class="line">Keep-Alive: timeout=2, max=100</span><br><span class="line">Connection: Keep-Alive</span><br><span class="line">Content-Type: text/plain</span><br></pre></td></tr></table></figure>
-<p>Server回傳的response<br>接受<code>http://foo.example</code>的跨域請求<br>接受的方法是POST, GET, OPTIONS<br>接受的header是X-PINGOTHER</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/d7cff5a7/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -291,7 +286,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-11-29 09:28:29 / 修改時間：13:08:12" itemprop="dateCreated datePublished" datetime="2023-11-29T09:28:29+08:00">2023-11-29</time>
+      <time title="創建時間：2023-11-29 09:28:29 / 修改時間：15:22:40" itemprop="dateCreated datePublished" datetime="2023-11-29T09:28:29+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,41 +308,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>知道同源的觀念之後</p>
-<p>CORS主要是為了安全性而存在的保護機制</p>
-<p>那如果不同源，要怎麼讓網頁應用存取不同源的伺服器Server的資源??</p>
-<p>我們可以透過CORS機制的以下3種方式去達成<br><strong>1. 簡單請求(Simple Request)</strong><br><strong>2. 預檢請求(Preflight Request)</strong><br><strong>3. 附帶身分驗證的請求(Credentialed)</strong></p>
-<p><strong>來介紹簡單請求</strong></p>
-<ul>
-<li><p>方法method只有3種:<br>GET、HEAD、POST</p>
-</li>
-<li><p>標頭header:<br>除了user-agent自動設定的標頭以外<br>Accept、Accept-Language、Content-Language、Content-Type、Last-Event-ID、DPR、Save-Data、Viewport-Width、Width</p>
-</li>
-<li><p>Content-Type只允許:<br>application&#x2F;x-www-form-urlencoded、<br>multipart&#x2F;form-data、<br>text&#x2F;plain</p>
-</li>
-<li><p>發出請求的物件沒有註冊事件監聽器</p>
-</li>
-<li><p>請求中沒有 ReadableStream物件被用於上傳</p>
-</li>
-</ul>
-<p>簡單請求，實際上怎麼運作呢?<br>分2個部分:客戶端Client以及伺服器端Server</p>
-<p>Client:向Server發出的簡單請求，標頭必須告訴大家Origin是哪一個網域(domain)</p>
-<p>Server:接到簡單請求之後，如果Server同意，發回來的回應response，回應中的標頭header，會有Access-Control-Allow-Origin: *   星號意思是允許所有網站來訪問我<br>如果沒有以上這一行<br>這個簡單請求就會失敗了<br><img src="https://ithelp.ithome.com.tw/upload/images/20230925/20162681Cu8ADQday8.png" alt="https://ithelp.ithome.com.tw/upload/images/20230925/20162681Cu8ADQday8.png"></p>
-<p>一起來看看詳細的內容<br>如果<code>http://foo.example</code> 網域上的網頁內容想要呼叫 <code>http://bar.other</code> 網域內的內容</p>
-<p><code>http://foo.example</code> 會發起簡單請求，在Origin的地方會註明<code>http://foo.example</code><br>方法是GET</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GET /resources/public-data/ HTTP/1.1</span><br><span class="line">Host: bar.other</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-us,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip,deflate</span><br><span class="line">Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Referer: http://foo.example/examples/access-control/simpleXSInvocation.html</span><br><span class="line">Origin: http://foo.example</span><br></pre></td></tr></table></figure>
-
-
-<p>Server會怎麼回應呢?</p>
-<p>Access-Control-Allow-Origin: <a target="_blank" rel="noopener" href="http://foo.example/">http://foo.example</a><br>這代表Server允許<code>http://foo.example</code> 這網域來訪問</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Mon, 01 Dec 2008 00:23:53 GMT</span><br><span class="line">Server: Apache/2.0.61</span><br><span class="line">Access-Control-Allow-Origin: http://foo.example</span><br><span class="line">Keep-Alive: timeout=2, max=100</span><br><span class="line">Connection: Keep-Alive</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">Content-Type: application/xml</span><br><span class="line"></span><br><span class="line">[XML Data]</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>請參考mdn文件<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS">https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS</a></p>
-
+          <p>知道同源的觀念之後<br>CORS主要是為了安全性而存在的保護機制<br>那如果不同源，要怎麼讓網頁應用存取不同源的伺服器Server的資源??</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/83f5352f/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -403,7 +372,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-11-29 09:24:31 / 修改時間：13:08:08" itemprop="dateCreated datePublished" datetime="2023-11-29T09:24:31+08:00">2023-11-29</time>
+      <time title="創建時間：2023-11-29 09:24:31 / 修改時間：15:24:54" itemprop="dateCreated datePublished" datetime="2023-11-29T09:24:31+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -426,64 +395,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>CORS 代表跨來源資源共用(Cross-Origin Resource Sharing)。它是一種瀏覽器的機制，用於限制網頁應用程式在不同來源(主機host、協定protocol、端口port)之間的資源共用。這是出於安全考量，以確保一個網頁應用程式只能請求和存取它自己的來源資源，而不容易被其他不受信任的網站濫用。</p>
-<p>講到CORS就不得不提到同源政策</p>
-<p><strong>同源政策(Same-Origin Policy)</strong><br>同源政策是一個瀏覽器安全機制，用於限制在網頁中的JavaScript程式碼如何與來自不同來源的資源進行交互。來源(origin)通常由協定(protocol)、主機(host)、和端口(port)組成，只有當兩個網頁的來源完全相同時，它們就被認為是同源的，否則就是跨源的。</p>
-<ol>
-<li><p>協定(protocol)：這指的是URL中的協定部分，通常是”http”或”https”。同一個來源的資源的協定必須完全一致，否則就被視為不同的來源。</p>
-</li>
-<li><p>主機(host)：這是URL中的主機名稱或IP地址部分。同一個來源的資源的主機部分必須相同，包括子域名(subdomain)。</p>
-</li>
-<li><p>端口(port)：這是URL中的端口號部分，通常在冒號後面指定，例如”:80”或”:443”。如果指定了端口，則同一個來源的資源的端口號也必須相同，如果未指定端口，則使用默認的端口號（http默認為80，https默認為443）。</p>
-</li>
-</ol>
-<p>同源政策的主要目的是確保網站的資源只能被它自己的網站訪問，以防止惡意網站在瀏覽器中執行釣魚攻擊、盜取用戶敏感信息等不當行為。以下是一個例子來說明同源政策：</p>
-<p>假設現在有兩個網站，網站A是<code>https://example.com</code>，網站B是<code>https://malicious.com</code></p>
-<p>以網站A做例子，先忽略網站B<br><code>https://example.com</code>網站的JavaScript程式碼中嘗試訪問<code>https://example.com/secret</code>上的資源，這是同源，被允許的，因為它們的來源相同。</p>
-<table>
-<thead>
-<tr>
-<th>URL</th>
-<th>是否同源</th>
-<th>原因</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>https://example.com/secret</code></td>
-<td>是</td>
-<td></td>
-</tr>
-<tr>
-<td><code>http//example.com</code></td>
-<td>否</td>
-<td>不同協定protocol</td>
-</tr>
-<tr>
-<td><code>https://example.com:6000</code></td>
-<td>否</td>
-<td>不同端口port</td>
-</tr>
-<tr>
-<td><code>https://happy.com</code></td>
-<td>否</td>
-<td>不同主機host</td>
-</tr>
-</tbody></table>
-<p>再來，以網站B做例子<br>如果在<code>https://malicious.com</code>上的JavaScript代碼嘗試訪問<code>https://malicious.com/evil</code>上的資源，這也是允許的，因為它們的來源相同。</p>
-<p>和同源的相反的情況就是<br><strong>跨源情況(Cross-Origin Situation)</strong><br>跨源情況下：<br>如果在<code>https://example.com</code>的JavaScript代碼中嘗試訪問<code>https://malicious.com/evil</code>上的資源，這就會違反同源政策，瀏覽器會阻止這樣的請求，因為它們的來源不同。這樣做可以防止惡意網站對其他網站的資源進行未授權的訪問。</p>
-<p>用一個簡單的例子來解釋CORS跨來源資源共用：</p>
-<p>網站A<code>https://example.com</code>並且使用者在該網站上運行JavaScript程式碼，該程式碼嘗試從網站B是<code>https://malicious.com</code>上請求資源，例如JSON數據。<br>因為有同源政策（Same-Origin Policy），瀏覽器默認情況下不允許這種跨來源請求，因為網站A和網站B不屬於相同的來源。<br>那CORS的用途是什麼呢?<br>CORS可以允許網站A在瀏覽器中請求網站B的資源，但是需要網站B明確地設置CORS規則以允許這種跨來源請求。<br>有機會的話，未來繼續說明CORS規則。</p>
-<p>CORS是增強瀏覽器的安全性，同時允許網站之間進行有限的跨來源資源共用。<br>以下是CORS的主要目的：</p>
-<ol>
-<li><p>安全性：CORS旨在防止跨站請求偽造（Cross-Site Request Forgery，CSRF）和跨站點腳本攻擊（Cross-Site Scripting，XSS）等安全攻擊。它確保網頁僅能訪問來自相同來源的資源，防止惡意網站在瀏覽器中執行不當操作。</p>
-</li>
-<li><p>防止資訊外洩：CORS可以防止用戶的敏感資訊在未授權的情況下被其他網站訪問。這可以通過僅允許特定來源訪問資源來實現。</p>
-</li>
-<li><p>資源共用：儘管CORS強調安全性，但它同時允許網站之間進行一定程度的資源共用。這是通過在伺服器端設置CORS標頭來實現的，使伺服器可以指定哪些來源網站被允許訪問它的資源。</p>
-</li>
-<li><p>跨域API請求：CORS使得跨網域的API請求變得可能。這對於網站之間的合作和資源共用非常重要。例如，一個前端網站可以通過CORS設置來訪問另一個後端API服務，以獲取數據或執行操作。</p>
-</li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/5f352d9a/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -545,7 +464,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:05" itemprop="dateModified" datetime="2023-11-29T13:08:05+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:37" itemprop="dateModified" datetime="2023-11-29T15:25:37+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -568,108 +487,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。<br>主要是把每個網址當做<strong>資源Resource</strong>來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果</p>
-<p>假設今天要獲取使用者的資料<br>URL可能會寫成<br>&#x2F;users_get&#x2F;1<br>&#x2F;get_users&#x2F;1<br>&#x2F;get_userList<br>&#x2F;reach_userList<br>&#x2F;get_userAll<br>&#x2F;reach_userAll<br>每一個人寫得都不同，API很混亂不一致，難以理解功能，不知道那URL是幹嘛的，搞不好過一陣子當初寫的人都不知道是什麼意思</p>
-<p>因此，我們可以借助RESTful的理念，無論是哪位開發者，可以有個統一的規範</p>
-<p>可以改寫成以下<br>獲取全部使用者資料 &#x2F;GET &#x2F;users<br>獲取使用者id為1的資料 &#x2F;GET &#x2F;users&#x2F;1</p>
-<p>設計RESTful API的基本原則:</p>
-<p><strong>1. 使用合適的HTTP方法：使用HTTP方法來表示操作類型</strong></p>
-<ul>
-<li>GET: 用於從伺服器獲取資源</li>
-<li>POST: 用於在伺服器上新增資源</li>
-<li>DELETE: 用於刪除現有的資源</li>
-<li>PUT &#x2F; PATCH: 用於更新現有的資源</li>
-</ul>
-<p>這邊以Ruby on rails舉例</p>
-<table>
-<thead>
-<tr>
-<th align="left">HTTP方法</th>
-<th align="left">路徑</th>
-<th align="left">Controller</th>
-<th align="left">Action</th>
-<th align="left">說明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">GET</td>
-<td align="left">&#x2F;users</td>
-<td align="left">UserController</td>
-<td align="left">index</td>
-<td align="left">使用者列表</td>
-</tr>
-<tr>
-<td align="left">POST</td>
-<td align="left">&#x2F;users</td>
-<td align="left">UserController</td>
-<td align="left">create</td>
-<td align="left">新增使用者</td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">&#x2F;users&#x2F;new</td>
-<td align="left">UserController</td>
-<td align="left">new</td>
-<td align="left">新增單一使用者頁面</td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">&#x2F;users&#x2F;:id&#x2F;edit</td>
-<td align="left">UserController</td>
-<td align="left">edit</td>
-<td align="left">編輯單一使用者頁面</td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">&#x2F;users&#x2F;:id</td>
-<td align="left">UserController</td>
-<td align="left">show</td>
-<td align="left">檢視單一使用者</td>
-</tr>
-<tr>
-<td align="left">PATCH</td>
-<td align="left">&#x2F;users&#x2F;:id</td>
-<td align="left">UserController</td>
-<td align="left">update</td>
-<td align="left">更新單一使用者</td>
-</tr>
-<tr>
-<td align="left">PUT</td>
-<td align="left">&#x2F;users&#x2F;:id</td>
-<td align="left">UserController</td>
-<td align="left">update</td>
-<td align="left">更新單一使用者</td>
-</tr>
-<tr>
-<td align="left">DELETE</td>
-<td align="left">&#x2F;users&#x2F;:id</td>
-<td align="left">UserController</td>
-<td align="left">destroy</td>
-<td align="left">刪除單一使用者</td>
-</tr>
-</tbody></table>
-<p><strong>2. 使用清晰的URI：URI應該具有可讀性，並且應該反映資源的層次結構。</strong><br><strong>3. 使用名詞而不是動詞：URI中應該包含資源名詞，而不是動詞；例如，使用&#x2F;users表示使用者資源</strong></p>
-<p>不要使用以下命名</p>
-<ul>
-<li>&#x2F;getUsers</li>
-<li>&#x2F;createUser</li>
-<li>&#x2F;updateUser</li>
-<li>&#x2F;deleteUser</li>
-</ul>
-<p><strong>4. 支援多種數據格式：RESTful API應該支援多種數據格式，如JSON和XML，以滿足不同客戶端的需求。</strong></p>
-<p><strong>5. 使用狀態碼：使用HTTP狀態碼來表示操作的結果，例如200 表示OK成功、404 Not Found表示資源不存在、500 表示伺服器錯誤等。</strong></p>
-<p>優點:</p>
-<ul>
-<li>HTTP方法以及資源Resource兩者切割分離，確保明確的操作行為，降低複雜度</li>
-<li>每個 API 專注做一件事，提高各種組合的可能性</li>
-</ul>
-<p>缺點:</p>
-<ul>
-<li>若一次需要操作多個資源Resource，還是得乖乖發送多個Request，效能方面較差</li>
-<li>網路上所有東西都是資源，將資源名詞抽象化其實不容易。定義正確資源名詞的URI，並使用HTTP方法去操作它</li>
-</ul>
-<p>資源」為主體，透過API去操作資源時，一次就是針對一個資源，如果有什麼複雜的需求，就是要多發幾次 request 才能辦到，聽起來雖然很麻煩很像缺點，但如果是開放給第三方串接的 API，大多時候你是不知道別人會怎樣使用你的資料，既然都不知道，那一次一個資源為單位的Request，其實是非常明確切分的，反正要怎麼組合這些資料，是串接者自己的事情了。</p>
-<p>參考資料<br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10301314" title="游標顯示">為什麼要用 RESTful API</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/22ef0a2a/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -731,7 +556,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:15" itemprop="dateModified" datetime="2023-11-29T13:08:15+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:30" itemprop="dateModified" datetime="2023-11-29T15:25:30+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -753,13 +578,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>對於初學者來說，API一直不容易理解的專有名詞<br>全名是Application Programming Interface<br>每個單字都懂，但是組合起來還是不知道是什麼意思<br>它是一個廣義的概念<br>只要讓兩種電腦程式，可以互相溝通的方式，都可以稱做API<br>因為每台電腦的系統都不同，所以需要一種特定的方式(標準化的方式)來交換資料<br>舉個例子<br>假設你今天到了星巴克咖啡店，星巴克的菜單可能會分類<br>咖啡類<br>星冰樂<br>茶類<br>果汁類</p>
-<p>在咖啡類有”焦糖瑪奇朵”<br>可能會記載內容物有焦糖醬、濃縮咖啡、綿密奶泡、牛奶<br>你看了這些內容物，是不是你想要的<br>某些內容物你想要調整或是客製化，譬如:濃縮咖啡要2份，牛奶要改成植物性杏仁奶<br>接著在櫃檯點飲料<br>店員會和您反映，他們有什麼材料或沒有什麼材料(如果完全沒有材料，以網站來比擬，就顯示404畫面)<br>接著店員收到你的需求，就開始做飲料<br>你只要負責在旁邊等飲料完成，而不需要知道來源以及過程(咖啡豆烘烤溫度多少、咖啡豆在哪裡種植的、奶泡要打多久的時間)</p>
-<p>API類似這個概念<br>只要知道需求是什麼，然後發送出去<br>使用者要的東西就會自動送到面前</p>
-<p>以下用HTTP的API做說明<br>使用者今天要訂機票<br>一定會在網站輸入資料<br>包括護照號碼、個人基本資料、出發地、出發日期、信用卡資訊等等<br>輸入完成後，只要點下確認鍵送出去<br>購買的機票就會出來了</p>
-<p>其實背後很多東西在運作<br>按下確認鍵的那一瞬間(發送請求)<br>像是信用卡資訊，就要給金流的服務商Server去做驗證和授權(處理收到的請求)，所以機票的網站要連接到金流的API，交給它們處理，完成最後的交易流程<br>訂購機票的網站開發者不需要自己寫程式確認信用卡有沒有過期、信用卡額度等等等</p>
-<p>除此之外<br>在Web開發的過程中，前端和後端的協調，也使用到API做為橋樑</p>
-
+          <p>對於初學者來說，API一直不容易理解的專有名詞<br>全名是Application Programming Interface</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/a400cba0/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -821,7 +648,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:07:53" itemprop="dateModified" datetime="2023-11-29T13:07:53+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:09" itemprop="dateModified" datetime="2023-11-29T15:25:09+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -844,15 +671,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>很多程式語言都有框架來實現MVC架構<br>例如: Java, Python, Ruby, PHP</p>
-<p>拿Ruby的Ruby on rails做MVC架構的做說明<br><strong>M:Model</strong><br>Model本身不是資料庫，只是處理資料數據的管理，包括從資料庫中搜尋數據、將數據儲存到資料庫中、更新數據、刪除數據等。<br>它也負責數據的驗證，譬如以下範例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Person &lt; ApplicationRecord</span><br><span class="line">  validates :name, presence: true</span><br><span class="line">  validates :age, numericality: &#123; only_integer: true, greater_than_or_equal_to: 18 &#125;</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Model會去資料庫調閱資料，在資料庫查詢到的東西是raw data，找到資料之後交給Controller。</p>
-<p><strong>V:View</strong><br>負責將數據呈現給使用者，以便使用者在網站上查看並和網站互動。這包括顯示文字、圖片、表格、表單元素等，以呈現數據和內容。<br>View將Model中的原始數據轉換為使用者看得懂的格式。<br>例如，將日期和時間格式化為可讀的形式，將數字格式化為貨幣或百分比等。</p>
-<p><strong>C:Controller</strong><br>接收來自使用者的HTTP請求，這些請求可以包括瀏覽網頁、提交表單、點擊按鈕等。根據請求的不同類型和內容來決定應該執行哪些操作。<br>最主要的職責在Model和View之間做一個溝通橋樑，居中協調。當Controller接收到請求時，找到對應的Model拿到資料數據，然後將處理後的數據傳遞給View呈現出來(數據透過html、css呈現給使用者觀看)</p>
-<p>為什麼使用MVC架構呢?<br>有以下特色</p>
-<p>關注點分離：MVC 將應用程序分成三個主要部分，每個部分都有不同的職責。這有助於保持程式碼的結構性和可維護性。模型（Model）處理數據和資料邏輯，視圖（View）負責使用者界面，控制器（Controller）處理使用者輸入以及協調Model和View之間的資料數據傳遞。關注點分離使程式碼更容易理解和修改。</p>
-<p>可維護性：由於 MVC 將不同的功能分開，因此更容易進行單元測試和調用。開發人員可以專注於單個部分，而不必擔心整個應用程序的運作。這有助於降低錯誤的風險並提高程式碼的可維護性。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/8f0fc967/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -914,7 +740,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:37" itemprop="dateModified" datetime="2023-11-29T13:08:37+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:00" itemprop="dateModified" datetime="2023-11-29T15:25:00+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -937,13 +763,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>將資料類型轉換為字串類型<br>先介紹toString()<br>數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串</p>
-<p>由於null以及undefined沒有toString()這個方法，因此產生錯誤</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let a = true;</span><br><span class="line">a = a.toSting();</span><br><span class="line">console.log(typeof a, a) //輸出 &quot;string&quot; &quot;true&quot;</span><br><span class="line"></span><br><span class="line">let b = null;</span><br><span class="line">b = b.toSting();</span><br><span class="line">console.log(typeof b, b) //輸出 Uncaught TypeError: Cannnot read properties of null (reading &#x27;toString&#x27;)</span><br><span class="line"></span><br><span class="line">let c = undefined;</span><br><span class="line">c = c.toString();</span><br><span class="line">console.log(typeof c, c) //輸出 Uncaught TypeError: Cannnot read properties of undefined (reading &#x27;toString&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>緊接著說明String()<br>數值、布林值，String()可以轉換成字串，根據原型資料去創造一個字串</p>
-<p>對於null，則直接轉為”null”<br>對於undefined，則直接轉為”undefined”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let a = 46</span><br><span class="line">a = String(a)</span><br><span class="line">console.log(typeof a, a) //輸出 &quot;string&quot; &quot;46&quot;</span><br><span class="line"></span><br><span class="line">let b = null</span><br><span class="line">b = String(b)</span><br><span class="line">console.log(typeof b, b) //輸出 &quot;string&quot; &quot;null&quot;</span><br><span class="line"></span><br><span class="line">let c = undefined</span><br><span class="line">c = String(c)</span><br><span class="line">console.log(typeof c, c) //輸出 &quot;string&quot; &quot;undefined&quot;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/f1436175/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -987,7 +814,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/25c96c7b/" class="post-title-link" itemprop="url">javascript 類型轉換 Number( ) parseInt( )</a>
+          <a href="/posts/25c96c7b/" class="post-title-link" itemprop="url">Javascript 類型轉換 Number( ) parseInt( )</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1005,7 +832,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:32" itemprop="dateModified" datetime="2023-11-29T13:08:32+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:23:22" itemprop="dateModified" datetime="2023-11-29T15:23:22+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1027,24 +854,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Number( )<br>可以將其他的類型轉換成<code>number</code><br>字串裡面是一個合法的數字，則轉換對應的數字<br>字串裡面是空白，則轉換成數字0</p>
-<p>留意以下狀況!!<br>字串裡面不是合法的數字，則轉換為NaN<br>null，則轉換為0<br>undefined，則轉換為NaN</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">let a = &quot;123&quot;;</span><br><span class="line">a = Number(a);</span><br><span class="line"></span><br><span class="line">let b = &quot;english&quot;;</span><br><span class="line">b = Number(b);</span><br><span class="line"></span><br><span class="line">let c = &quot;32px&quot;;</span><br><span class="line">c = Number(c);</span><br><span class="line"></span><br><span class="line">let d = &quot;    &quot;;</span><br><span class="line">d = Number(d);</span><br><span class="line"></span><br><span class="line">let e = true;</span><br><span class="line">e = Number(e);</span><br><span class="line"></span><br><span class="line">let f = null;</span><br><span class="line">f = Number(f);</span><br><span class="line"></span><br><span class="line">let g = undefined;</span><br><span class="line">g = Number(g);</span><br><span class="line"></span><br><span class="line">console.log(a, typeof b, b, c, d, e, f, g);</span><br><span class="line"></span><br><span class="line">//輸出      123 &quot;number&quot; NaN  NaN  0  1  0  NaN</span><br></pre></td></tr></table></figure>
-
-<p>接續來介紹，類似但是結果不同<br>parseInt( )<br>將字串轉換成一個<strong>整數</strong><br>parseInt解析的時候，從左至右讀取字串，直到讀取字串裡面所有的整數<br>字串的左邊第一個不是數字，則轉換為NaN</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let a = &quot;32px&quot;;</span><br><span class="line">a = parseInt(a);</span><br><span class="line">console.log(a, typeof a);</span><br><span class="line"></span><br><span class="line">//輸出 32 &quot;number&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let b = &quot;3.14159265359&quot;;</span><br><span class="line">b = parseInt(b);</span><br><span class="line">console.log(b, typeof b);</span><br><span class="line"></span><br><span class="line">//輸出 3 &quot;number&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let c = &quot;hello77&quot;;</span><br><span class="line">c = parseInt(c);</span><br><span class="line">console.log(c, typeof c);</span><br><span class="line"></span><br><span class="line">//輸出 NaN &quot;number&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-<p>參考mdn文件<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number</a></p>
-
+          <p>Number( )<br>可以將其他的類型轉換成<code>number</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/25c96c7b/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1106,7 +924,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:27" itemprop="dateModified" datetime="2023-11-29T13:08:27+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:24:55" itemprop="dateModified" datetime="2023-11-29T15:24:55+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1128,29 +946,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="https://ithelp.ithome.com.tw/upload/images/20230919/20162681ByHdnWZvqk.png" alt="https://ithelp.ithome.com.tw/upload/images/20230919/20162681ByHdnWZvqk.png"><br>反引號(backtick)在鍵盤Esc的正下方<br>使用反引號的優點<br>1.可以輕鬆完成多行的字符串，而不必用換行符(\n)<br>2.反引號允許在字串中樣板字串插入表達式，只要使用 ${expression}語法，這使得動態新增字串變得非常方便<br>3.容易閱讀的特性，樣板字串的語法容易閱讀而且更直觀，特別在字串裡面包含變數或表達式，和傳統字串拼湊做比較，反引號更容易理解</p>
-<p>建立樣板字串</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const name = &#x27;Alice&#x27;;</span><br><span class="line">const greeting = `Hello, $&#123;name&#125;!`;</span><br><span class="line">console.log(greeting);</span><br><span class="line">// 輸出：Hello, Alice!</span><br></pre></td></tr></table></figure>
-
-<p>建立多行的樣板字串</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const multiLineText = `</span><br><span class="line">I am</span><br><span class="line">multi-line</span><br><span class="line">string.</span><br><span class="line">`;</span><br><span class="line">console.log(multiLineText);</span><br><span class="line">/*</span><br><span class="line">輸出：</span><br><span class="line">I am</span><br><span class="line">multi-line</span><br><span class="line">string.</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-
-<p>如果是使用換行符(\n)，不直觀且不容易看懂</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const multiLineText = &quot;This is a\nmulti-line\nstring.&quot;;</span><br><span class="line">console.log(multiLineText);</span><br><span class="line">/*</span><br><span class="line">輸出：</span><br><span class="line">This is a</span><br><span class="line">multi-line</span><br><span class="line">string.</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-
-
-
-<p>嵌入樣板字串</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const firstName = &#x27;John&#x27;;</span><br><span class="line">const lastName = &#x27;Doe&#x27;;</span><br><span class="line">const fullName = `My name is $&#123;firstName&#125; $&#123;lastName&#125;`;</span><br><span class="line">console.log(fullName);</span><br><span class="line">// 輸出：My name is John Doe</span><br></pre></td></tr></table></figure>
-
-
-<p>在function中使用樣板字串：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function greet(name) &#123;</span><br><span class="line">  return `Hello, $&#123;name&#125;!`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(greet(&#x27;Bob&#x27;));</span><br><span class="line">// 輸出：Hello, Bob!</span><br></pre></td></tr></table></figure>
-
-
-
-<p>參考mdn文件如下<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Template_literals</a></p>
-
+          <p><img src="https://ithelp.ithome.com.tw/upload/images/20230919/20162681ByHdnWZvqk.png" alt="https://ithelp.ithome.com.tw/upload/images/20230919/20162681ByHdnWZvqk.png"><br>反引號(backtick)在鍵盤Esc的正下方<br>使用反引號的優點</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/1b55fbbd/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1212,7 +1016,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:40" itemprop="dateModified" datetime="2023-11-29T13:08:40+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:24:58" itemprop="dateModified" datetime="2023-11-29T15:24:58+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1234,70 +1038,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Primitive Data Types<br>Javascript的資料類型有很多種類<br>今天先介紹原始類型(Primitive Data Types)</p>
-<ul>
-<li><strong>數字（Number）</strong>：表示為數值，可以是整數或浮點數。<br>Javascript的數字並不能無限大，會顯示出近似值(比較大或比較小)<br>數字多位數的時候，Javascript會使用科學記號e表示<br>數字計算最大的結果，會顯示Infinity，Infinity是特殊的數字，表示無窮的意思</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let integerNumber = 42; // 整數</span><br><span class="line">let floatNumber = 3.14; // 浮點數</span><br></pre></td></tr></table></figure>
-
-<p>顯示出近似值(比較大或比較小)，console.log結果依據JavaScript引擎和環境的差異會有不同答案，以下只是範例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let a = 9999999999999991</span><br><span class="line">console.log(a); // 9999999999999992</span><br><span class="line">let b = 99999999999999911</span><br><span class="line">console.log(b); // 99999999999999900</span><br></pre></td></tr></table></figure>
-
-<p>運算結果太大，會顯示出Infinity</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let c = 99999 ** 99999</span><br><span class="line">console.log(c); // Infinity</span><br></pre></td></tr></table></figure>
-
-<p>另外<br><strong>NaN（Not-a-Number）</strong>：名稱雖然是NaN，但是在Javascript是屬於數字<br>NaN通常由不合法的運算結果產生，可能的狀況如下<br>將非數字字符串轉換為數字:<br>parseInt(“Hello”)<br>0除以0:<br>0 &#x2F; 0<br>數字除以非數字:<br>5 &#x2F; “apple”</p>
-<p>任何關連到NaN的數學運算結果通常也是NaN</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(NaN + 5); // NaN</span><br><span class="line">console.log(NaN * 2); // NaN</span><br></pre></td></tr></table></figure>
-
-
-<p>NaN不等於任何值，也不等於自己(NaN)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(NaN === NaN); // false</span><br></pre></td></tr></table></figure>
-
-
-<p>檢查NaN的方法如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(isNaN(NaN)); // true</span><br><span class="line">console.log(isNaN(42));  // false</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li><p><strong>字串（String）</strong>：表示為文字。字串以單引號或雙引號括起來。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let greeting = &quot;Hello, World!&quot;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>布林值（Boolean）</strong>：只有兩個值，true或false，用於表示邏輯狀態。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let isItTrue = true;</span><br><span class="line">let isItFalse = false;</span><br></pre></td></tr></table></figure>
-<p>另外<br>true在數值上等於1<br>false在數值上等於0</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(true == 1); // 輸出 true</span><br><span class="line">console.log(false == 0); // 輸出 true</span><br></pre></td></tr></table></figure>
-<p>但是使用&#x3D;&#x3D;&#x3D;，結果完全不同，會比較數值，也比較數據類型</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(true === 1); // 輸出 false，因为它們的類型不同</span><br><span class="line">console.log(false === 0); // 輸出 false，因为它們的類型不同</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><strong>未定義（Undefined）</strong>：變數已聲明但未賦值，或是function沒有返回值，沒有做return。<br>現在宣告一個變數叫undeclaredVariable<br>可以利用typeof這個方法，確認是什麼類型，是undefined</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let undeclaredVariable;</span><br><span class="line">console.log(typeof undeclaredVariable); //輸出 &quot;undefined&quot;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p><strong>空值（Null）</strong>：表示為空值或無效物件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let emptyValue = null;</span><br></pre></td></tr></table></figure>
-<p>再次利用typeof，確認null是什麼類型，null是一個物件(object)空的物件，表示空的對象</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(typeof emptyValue); //輸出 &quot;object&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>符號（Symbol）</strong>：創建唯一的識別符號。</p>
-</li>
-</ul>
-<p>特別提醒<br>符號是ECMAScript 6（ES6）引入的一種新的原始資料型態，它的主要特點是每個符號都是唯一的。具有唯一的特性、不可以重新賦值、另外可以自己對每個符號提供描述。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const  a = Symbol();</span><br><span class="line">const  b = Symbol();</span><br><span class="line">const  c = Symbol();</span><br><span class="line">console.log(a === c); // false</span><br></pre></td></tr></table></figure>
-<p>   請記得符號唯一的特性，即使符號裡面的描述是一模一樣，也不會和其他符號相等。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const symbol7 = Symbol(&quot;mySymbol&quot;);</span><br><span class="line">const symbol8 = Symbol(&quot;mySymbol&quot;);</span><br><span class="line">console.log(symbol7 === symbol8); // false</span><br></pre></td></tr></table></figure>
-<p>   不可以重新賦值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const symbol = Symbol(&quot;mySymbol&quot;);</span><br><span class="line">symbol = Symbol(&quot;theirSymbol&quot;); // 這將引發錯誤，無法重新賦值</span><br></pre></td></tr></table></figure>
-<p>   當使用符號的時候，可以提供描述，描述可以幫助您理解符號的用途或含義，這對於代碼的可讀性和維護性很有幫助。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const namedSymbol = Symbol(&quot;This is a description&quot;);</span><br></pre></td></tr></table></figure>
-<p>  對不同的符號提供描述</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const info = Symbol(&quot;info&quot;);</span><br><span class="line">const error = Symbol(&quot;error&quot;);</span><br></pre></td></tr></table></figure>
-
+          <p>Primitive Data Types<br>Javascript的資料類型有很多種類</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/7a4fbd52/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1333,7 +1082,7 @@
     </span>
     <span class="author" itemprop="copyrightHolder">Finn Wu</span>
   </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
     </div>

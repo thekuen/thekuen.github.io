@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="將資料類型轉換為字串類型先介紹toString()數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串 由於null以及undefined沒有toString()這個方法，因此產生錯誤 1234567891011let a &#x3D; true;a &#x3D; a.toSting();console.log(typeof a, a) &#x2F;&#x2F;輸出 &quot;string&quot; &amp;q">
+    <meta name="description" content="將資料類型轉換為字串類型先介紹toString()數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript 類型轉換 String( ) toString( )">
 <meta property="og:url" content="http://example.com/posts/f1436175/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
-<meta property="og:description" content="將資料類型轉換為字串類型先介紹toString()數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串 由於null以及undefined沒有toString()這個方法，因此產生錯誤 1234567891011let a &#x3D; true;a &#x3D; a.toSting();console.log(typeof a, a) &#x2F;&#x2F;輸出 &quot;string&quot; &amp;q">
+<meta property="og:description" content="將資料類型轉換為字串類型先介紹toString()數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-11-28T14:34:39.000Z">
-<meta property="article:modified_time" content="2023-11-29T05:08:37.624Z">
+<meta property="article:modified_time" content="2023-11-29T07:25:00.489Z">
 <meta property="article:author" content="Finn Wu">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -38,7 +38,7 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/f1436175/","path":"posts/f1436175/","title":"Javascript 類型轉換 String( ) toString( )"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":"","permalink":"http://example.com/posts/f1436175/","path":"posts/f1436175/","title":"Javascript 類型轉換 String( ) toString( )"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Javascript 類型轉換 String( ) toString( ) | Finn's blog</title>
@@ -209,7 +209,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:37" itemprop="dateModified" datetime="2023-11-29T13:08:37+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:00" itemprop="dateModified" datetime="2023-11-29T15:25:00+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,6 +231,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>將資料類型轉換為字串類型<br>先介紹toString()<br>數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串</p>
+<span id="more"></span>
+
 <p>由於null以及undefined沒有toString()這個方法，因此產生錯誤</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let a = true;</span><br><span class="line">a = a.toSting();</span><br><span class="line">console.log(typeof a, a) //輸出 &quot;string&quot; &quot;true&quot;</span><br><span class="line"></span><br><span class="line">let b = null;</span><br><span class="line">b = b.toSting();</span><br><span class="line">console.log(typeof b, b) //輸出 Uncaught TypeError: Cannnot read properties of null (reading &#x27;toString&#x27;)</span><br><span class="line"></span><br><span class="line">let c = undefined;</span><br><span class="line">c = c.toString();</span><br><span class="line">console.log(typeof c, c) //輸出 Uncaught TypeError: Cannnot read properties of undefined (reading &#x27;toString&#x27;)</span><br></pre></td></tr></table></figure>
 
@@ -253,8 +255,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/25c96c7b/" rel="prev" title="javascript 類型轉換 Number( ) parseInt( )">
-                  <i class="fa fa-angle-left"></i> javascript 類型轉換 Number( ) parseInt( )
+                <a href="/posts/25c96c7b/" rel="prev" title="Javascript 類型轉換 Number( ) parseInt( )">
+                  <i class="fa fa-angle-left"></i> Javascript 類型轉換 Number( ) parseInt( )
                 </a>
             </div>
             <div class="post-nav-item">
@@ -286,7 +288,7 @@
     </span>
     <span class="author" itemprop="copyrightHolder">Finn Wu</span>
   </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
     </div>

@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。主要是把每個網址當做資源Resource來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果 假設今天要獲取使用者的資料URL可能會寫成&#x2F;users_get&#x2F;1&#x2F;get_users&#x2F;1&#x2F;get_userList&#x2F;reach_u">
+    <meta name="description" content="RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。主要是把每個網址當做資源Resource來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RESTful API設計風格">
 <meta property="og:url" content="http://example.com/posts/22ef0a2a/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
-<meta property="og:description" content="RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。主要是把每個網址當做資源Resource來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果 假設今天要獲取使用者的資料URL可能會寫成&#x2F;users_get&#x2F;1&#x2F;get_users&#x2F;1&#x2F;get_userList&#x2F;reach_u">
+<meta property="og:description" content="RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。主要是把每個網址當做資源Resource來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-11-28T15:13:02.000Z">
-<meta property="article:modified_time" content="2023-11-29T05:08:05.049Z">
+<meta property="article:modified_time" content="2023-11-29T07:25:37.689Z">
 <meta property="article:author" content="Finn Wu">
 <meta property="article:tag" content="API">
 <meta name="twitter:card" content="summary">
@@ -38,7 +38,7 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/22ef0a2a/","path":"posts/22ef0a2a/","title":"RESTful API設計風格"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":"","permalink":"http://example.com/posts/22ef0a2a/","path":"posts/22ef0a2a/","title":"RESTful API設計風格"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>RESTful API設計風格 | Finn's blog</title>
@@ -209,7 +209,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:08:05" itemprop="dateModified" datetime="2023-11-29T13:08:05+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 15:25:37" itemprop="dateModified" datetime="2023-11-29T15:25:37+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,6 +231,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。<br>主要是把每個網址當做<strong>資源Resource</strong>來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果</p>
+<span id="more"></span>
+
 <p>假設今天要獲取使用者的資料<br>URL可能會寫成<br>&#x2F;users_get&#x2F;1<br>&#x2F;get_users&#x2F;1<br>&#x2F;get_userList<br>&#x2F;reach_userList<br>&#x2F;get_userAll<br>&#x2F;reach_userAll<br>每一個人寫得都不同，API很混亂不一致，難以理解功能，不知道那URL是幹嘛的，搞不好過一陣子當初寫的人都不知道是什麼意思</p>
 <p>因此，我們可以借助RESTful的理念，無論是哪位開發者，可以有個統一的規範</p>
 <p>可以改寫成以下<br>獲取全部使用者資料 &#x2F;GET &#x2F;users<br>獲取使用者id為1的資料 &#x2F;GET &#x2F;users&#x2F;1</p>
@@ -381,7 +383,7 @@
     </span>
     <span class="author" itemprop="copyrightHolder">Finn Wu</span>
   </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
     </div>
