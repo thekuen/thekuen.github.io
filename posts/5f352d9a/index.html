@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在Javascript語法裡面變數與常數命名方式要特別留意不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例  駝峰式命名方式Camel Case，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。  不可以使用Javascri">
+    <meta name="description" content="CORS 代表跨來源資源共用(Cross-Origin Resource Sharing)。它是一種瀏覽器的機制，用於限制網頁應用程式在不同來源(主機host、協定protocol、端口port)之間的資源共用。這是出於安全考量，以確保一個網頁應用程式只能請求和存取它自己的來源資源，而不容易被其他不受信任的網站濫用。 講到CORS就不得不提到同源政策 同源政策(Same-Origin Policy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript 命名規範">
-<meta property="og:url" content="http://example.com/posts/6b10133a/index.html">
+<meta property="og:title" content="跨來源資源共用CORS">
+<meta property="og:url" content="http://example.com/posts/5f352d9a/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
-<meta property="og:description" content="在Javascript語法裡面變數與常數命名方式要特別留意不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例  駝峰式命名方式Camel Case，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。  不可以使用Javascri">
+<meta property="og:description" content="CORS 代表跨來源資源共用(Cross-Origin Resource Sharing)。它是一種瀏覽器的機制，用於限制網頁應用程式在不同來源(主機host、協定protocol、端口port)之間的資源共用。這是出於安全考量，以確保一個網頁應用程式只能請求和存取它自己的來源資源，而不容易被其他不受信任的網站濫用。 講到CORS就不得不提到同源政策 同源政策(Same-Origin Policy">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-11-28T13:09:34.000Z">
-<meta property="article:modified_time" content="2023-11-29T05:07:48.609Z">
+<meta property="article:published_time" content="2023-11-29T01:24:31.000Z">
+<meta property="article:modified_time" content="2023-11-29T05:08:08.828Z">
 <meta property="article:author" content="Finn Wu">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="CORS">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/posts/6b10133a/">
+<link rel="canonical" href="http://example.com/posts/5f352d9a/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/6b10133a/","path":"posts/6b10133a/","title":"Javascript 命名規範"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/5f352d9a/","path":"posts/5f352d9a/","title":"跨來源資源共用CORS"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Javascript 命名規範 | Finn's blog</title>
+<title>跨來源資源共用CORS | Finn's blog</title>
   
 
 
@@ -173,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/posts/6b10133a/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/5f352d9a/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/20230829.jpg">
@@ -186,12 +186,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Javascript 命名規範 | Finn's blog">
+      <meta itemprop="name" content="跨來源資源共用CORS | Finn's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript 命名規範
+          跨來源資源共用CORS
         </h1>
 
         <div class="post-meta-container">
@@ -201,15 +201,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2023-11-28 21:09:34" itemprop="dateCreated datePublished" datetime="2023-11-28T21:09:34+08:00">2023-11-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:07:48" itemprop="dateModified" datetime="2023-11-29T13:07:48+08:00">2023-11-29</time>
+      <time title="創建時間：2023-11-29 09:24:31 / 修改時間：13:08:08" itemprop="dateCreated datePublished" datetime="2023-11-29T09:24:31+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -217,7 +211,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/categories/CORS/" itemprop="url" rel="index"><span itemprop="name">CORS</span></a>
         </span>
     </span>
 
@@ -230,25 +224,64 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>在Javascript語法裡面<br>變數與常數命名方式要特別留意<br>不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例</p>
-<ul>
-<li><p><strong>駝峰式命名方式Camel Case</strong>，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。</p>
+    <div class="post-body" itemprop="articleBody"><p>CORS 代表跨來源資源共用(Cross-Origin Resource Sharing)。它是一種瀏覽器的機制，用於限制網頁應用程式在不同來源(主機host、協定protocol、端口port)之間的資源共用。這是出於安全考量，以確保一個網頁應用程式只能請求和存取它自己的來源資源，而不容易被其他不受信任的網站濫用。</p>
+<p>講到CORS就不得不提到同源政策</p>
+<p><strong>同源政策(Same-Origin Policy)</strong><br>同源政策是一個瀏覽器安全機制，用於限制在網頁中的JavaScript程式碼如何與來自不同來源的資源進行交互。來源(origin)通常由協定(protocol)、主機(host)、和端口(port)組成，只有當兩個網頁的來源完全相同時，它們就被認為是同源的，否則就是跨源的。</p>
+<ol>
+<li><p>協定(protocol)：這指的是URL中的協定部分，通常是”http”或”https”。同一個來源的資源的協定必須完全一致，否則就被視為不同的來源。</p>
 </li>
-<li><p><strong>不可以使用Javascript保留字</strong>，因為這群保留字在javscript具有特殊的語法和意義，詳細資料請看最底下的保留字列表。</p>
+<li><p>主機(host)：這是URL中的主機名稱或IP地址部分。同一個來源的資源的主機部分必須相同，包括子域名(subdomain)。</p>
 </li>
-<li><p><strong>不可以使用數字作為開頭</strong>。會造成程式碼的錯誤結果，假如有一個”123var”或是”6variable”的變數，這樣是錯的，會引發SyntaxError或是程式碼錯誤。</p>
+<li><p>端口(port)：這是URL中的端口號部分，通常在冒號後面指定，例如”:80”或”:443”。如果指定了端口，則同一個來源的資源的端口號也必須相同，如果未指定端口，則使用默認的端口號（http默認為80，https默認為443）。</p>
 </li>
-<li><p><strong>可以使用下底線作為開頭</strong><br> _privateVariable、<br> _userProfileData、<br> _calculateTotalAmount、<br> _getProductInfoById，但是不同專案的狀況，還是要依據該專案的命名風格為主，以確保整個程式碼的一致性</p>
+</ol>
+<p>同源政策的主要目的是確保網站的資源只能被它自己的網站訪問，以防止惡意網站在瀏覽器中執行釣魚攻擊、盜取用戶敏感信息等不當行為。以下是一個例子來說明同源政策：</p>
+<p>假設現在有兩個網站，網站A是<code>https://example.com</code>，網站B是<code>https://malicious.com</code></p>
+<p>以網站A做例子，先忽略網站B<br><code>https://example.com</code>網站的JavaScript程式碼中嘗試訪問<code>https://example.com/secret</code>上的資源，這是同源，被允許的，因為它們的來源相同。</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>是否同源</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>https://example.com/secret</code></td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td><code>http//example.com</code></td>
+<td>否</td>
+<td>不同協定protocol</td>
+</tr>
+<tr>
+<td><code>https://example.com:6000</code></td>
+<td>否</td>
+<td>不同端口port</td>
+</tr>
+<tr>
+<td><code>https://happy.com</code></td>
+<td>否</td>
+<td>不同主機host</td>
+</tr>
+</tbody></table>
+<p>再來，以網站B做例子<br>如果在<code>https://malicious.com</code>上的JavaScript代碼嘗試訪問<code>https://malicious.com/evil</code>上的資源，這也是允許的，因為它們的來源相同。</p>
+<p>和同源的相反的情況就是<br><strong>跨源情況(Cross-Origin Situation)</strong><br>跨源情況下：<br>如果在<code>https://example.com</code>的JavaScript代碼中嘗試訪問<code>https://malicious.com/evil</code>上的資源，這就會違反同源政策，瀏覽器會阻止這樣的請求，因為它們的來源不同。這樣做可以防止惡意網站對其他網站的資源進行未授權的訪問。</p>
+<p>用一個簡單的例子來解釋CORS跨來源資源共用：</p>
+<p>網站A<code>https://example.com</code>並且使用者在該網站上運行JavaScript程式碼，該程式碼嘗試從網站B是<code>https://malicious.com</code>上請求資源，例如JSON數據。<br>因為有同源政策（Same-Origin Policy），瀏覽器默認情況下不允許這種跨來源請求，因為網站A和網站B不屬於相同的來源。<br>那CORS的用途是什麼呢?<br>CORS可以允許網站A在瀏覽器中請求網站B的資源，但是需要網站B明確地設置CORS規則以允許這種跨來源請求。<br>有機會的話，未來繼續說明CORS規則。</p>
+<p>CORS是增強瀏覽器的安全性，同時允許網站之間進行有限的跨來源資源共用。<br>以下是CORS的主要目的：</p>
+<ol>
+<li><p>安全性：CORS旨在防止跨站請求偽造（Cross-Site Request Forgery，CSRF）和跨站點腳本攻擊（Cross-Site Scripting，XSS）等安全攻擊。它確保網頁僅能訪問來自相同來源的資源，防止惡意網站在瀏覽器中執行不當操作。</p>
 </li>
-<li><p><strong>建議使用有意義的名稱</strong>，讓其他人一眼看到可以大概了解是什麼意思，在閱讀程式碼的時候，或是在維護程式的時候，可以更快更容易理解。</p>
+<li><p>防止資訊外洩：CORS可以防止用戶的敏感資訊在未授權的情況下被其他網站訪問。這可以通過僅允許特定來源訪問資源來實現。</p>
 </li>
-<li><p><strong>避免使用縮寫</strong>，譬如:tAmt、dBase、Ncount，這樣無法釐清真實的意義，非常混淆</p>
+<li><p>資源共用：儘管CORS強調安全性，但它同時允許網站之間進行一定程度的資源共用。這是通過在伺服器端設置CORS標頭來實現的，使伺服器可以指定哪些來源網站被允許訪問它的資源。</p>
 </li>
-<li><p><strong>名稱是區分大小寫的</strong>，大寫字母和小寫字母是不一樣的名稱，譬如:userAge 和 UserAge是不同的變數，它們具有不同的意義，<strong>但是請使用駝峰式命名 (Camel Case)為主</strong></p>
+<li><p>跨域API請求：CORS使得跨網域的API請求變得可能。這對於網站之間的合作和資源共用非常重要。例如，一個前端網站可以通過CORS設置來訪問另一個後端API服務，以獲取數據或執行操作。</p>
 </li>
-</ul>
-<p>保留字列表<br>1.break<br>2.case<br>3.catch<br>4.class<br>5.const<br>6.continue<br>7.debugger<br>8.default<br>9.delete<br>10.do<br>11.else<br>12.export<br>13.extends<br>14.false<br>15.finally<br>16.for<br>17.function<br>18.if<br>19.import<br>20.in<br>21.instanceof<br>22.new<br>23.null<br>24.return<br>25.super<br>26.switch<br>27.this<br>28.throw<br>29.true<br>30.try<br>31.typeof<br>32.var<br>33.void<br>34.while<br>35.with</p>
-<p>請參考mdn說明<br><a href="http://">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords</a></p>
+</ol>
 
     </div>
 
@@ -258,17 +291,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/CORS/" rel="tag"># CORS</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/posts/22ef0a2a/" rel="prev" title="RESTful API設計風格">
+                  <i class="fa fa-angle-left"></i> RESTful API設計風格
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/7a4fbd52/" rel="next" title="Javascript 原始資料類型">
-                  Javascript 原始資料類型 <i class="fa fa-angle-right"></i>
+                <a href="/posts/83f5352f/" rel="next" title="CORS運作方式 簡單請求(Simple requests)">
+                  CORS運作方式 簡單請求(Simple requests) <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

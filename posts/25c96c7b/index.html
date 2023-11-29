@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在Javascript語法裡面變數與常數命名方式要特別留意不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例  駝峰式命名方式Camel Case，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。  不可以使用Javascri">
+    <meta name="description" content="Number( )可以將其他的類型轉換成number字串裡面是一個合法的數字，則轉換對應的數字字串裡面是空白，則轉換成數字0 留意以下狀況!!字串裡面不是合法的數字，則轉換為NaNnull，則轉換為0undefined，則轉換為NaN 123456789101112131415161718192021222324let a &#x3D; &quot;123&quot;;a &#x3D; Number(a);let b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript 命名規範">
-<meta property="og:url" content="http://example.com/posts/6b10133a/index.html">
+<meta property="og:title" content="javascript 類型轉換 Number( ) parseInt( )">
+<meta property="og:url" content="http://example.com/posts/25c96c7b/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
-<meta property="og:description" content="在Javascript語法裡面變數與常數命名方式要特別留意不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例  駝峰式命名方式Camel Case，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。  不可以使用Javascri">
+<meta property="og:description" content="Number( )可以將其他的類型轉換成number字串裡面是一個合法的數字，則轉換對應的數字字串裡面是空白，則轉換成數字0 留意以下狀況!!字串裡面不是合法的數字，則轉換為NaNnull，則轉換為0undefined，則轉換為NaN 123456789101112131415161718192021222324let a &#x3D; &quot;123&quot;;a &#x3D; Number(a);let b">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-11-28T13:09:34.000Z">
-<meta property="article:modified_time" content="2023-11-29T05:07:48.609Z">
+<meta property="article:published_time" content="2023-11-28T14:31:16.000Z">
+<meta property="article:modified_time" content="2023-11-29T05:08:32.673Z">
 <meta property="article:author" content="Finn Wu">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/posts/6b10133a/">
+<link rel="canonical" href="http://example.com/posts/25c96c7b/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/6b10133a/","path":"posts/6b10133a/","title":"Javascript 命名規範"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/posts/25c96c7b/","path":"posts/25c96c7b/","title":"javascript 類型轉換 Number( ) parseInt( )"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Javascript 命名規範 | Finn's blog</title>
+<title>javascript 類型轉換 Number( ) parseInt( ) | Finn's blog</title>
   
 
 
@@ -173,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/posts/6b10133a/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/25c96c7b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/20230829.jpg">
@@ -186,12 +186,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Javascript 命名規範 | Finn's blog">
+      <meta itemprop="name" content="javascript 類型轉換 Number( ) parseInt( ) | Finn's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript 命名規範
+          javascript 類型轉換 Number( ) parseInt( )
         </h1>
 
         <div class="post-meta-container">
@@ -202,14 +202,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2023-11-28 21:09:34" itemprop="dateCreated datePublished" datetime="2023-11-28T21:09:34+08:00">2023-11-28</time>
+      <time title="創建時間：2023-11-28 22:31:16" itemprop="dateCreated datePublished" datetime="2023-11-28T22:31:16+08:00">2023-11-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 13:07:48" itemprop="dateModified" datetime="2023-11-29T13:07:48+08:00">2023-11-29</time>
+      <time title="修改時間：2023-11-29 13:08:32" itemprop="dateModified" datetime="2023-11-29T13:08:32+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,25 +230,23 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>在Javascript語法裡面<br>變數與常數命名方式要特別留意<br>不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例</p>
-<ul>
-<li><p><strong>駝峰式命名方式Camel Case</strong>，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。</p>
-</li>
-<li><p><strong>不可以使用Javascript保留字</strong>，因為這群保留字在javscript具有特殊的語法和意義，詳細資料請看最底下的保留字列表。</p>
-</li>
-<li><p><strong>不可以使用數字作為開頭</strong>。會造成程式碼的錯誤結果，假如有一個”123var”或是”6variable”的變數，這樣是錯的，會引發SyntaxError或是程式碼錯誤。</p>
-</li>
-<li><p><strong>可以使用下底線作為開頭</strong><br> _privateVariable、<br> _userProfileData、<br> _calculateTotalAmount、<br> _getProductInfoById，但是不同專案的狀況，還是要依據該專案的命名風格為主，以確保整個程式碼的一致性</p>
-</li>
-<li><p><strong>建議使用有意義的名稱</strong>，讓其他人一眼看到可以大概了解是什麼意思，在閱讀程式碼的時候，或是在維護程式的時候，可以更快更容易理解。</p>
-</li>
-<li><p><strong>避免使用縮寫</strong>，譬如:tAmt、dBase、Ncount，這樣無法釐清真實的意義，非常混淆</p>
-</li>
-<li><p><strong>名稱是區分大小寫的</strong>，大寫字母和小寫字母是不一樣的名稱，譬如:userAge 和 UserAge是不同的變數，它們具有不同的意義，<strong>但是請使用駝峰式命名 (Camel Case)為主</strong></p>
-</li>
-</ul>
-<p>保留字列表<br>1.break<br>2.case<br>3.catch<br>4.class<br>5.const<br>6.continue<br>7.debugger<br>8.default<br>9.delete<br>10.do<br>11.else<br>12.export<br>13.extends<br>14.false<br>15.finally<br>16.for<br>17.function<br>18.if<br>19.import<br>20.in<br>21.instanceof<br>22.new<br>23.null<br>24.return<br>25.super<br>26.switch<br>27.this<br>28.throw<br>29.true<br>30.try<br>31.typeof<br>32.var<br>33.void<br>34.while<br>35.with</p>
-<p>請參考mdn說明<br><a href="http://">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords</a></p>
+    <div class="post-body" itemprop="articleBody"><p>Number( )<br>可以將其他的類型轉換成<code>number</code><br>字串裡面是一個合法的數字，則轉換對應的數字<br>字串裡面是空白，則轉換成數字0</p>
+<p>留意以下狀況!!<br>字串裡面不是合法的數字，則轉換為NaN<br>null，則轉換為0<br>undefined，則轉換為NaN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">let a = &quot;123&quot;;</span><br><span class="line">a = Number(a);</span><br><span class="line"></span><br><span class="line">let b = &quot;english&quot;;</span><br><span class="line">b = Number(b);</span><br><span class="line"></span><br><span class="line">let c = &quot;32px&quot;;</span><br><span class="line">c = Number(c);</span><br><span class="line"></span><br><span class="line">let d = &quot;    &quot;;</span><br><span class="line">d = Number(d);</span><br><span class="line"></span><br><span class="line">let e = true;</span><br><span class="line">e = Number(e);</span><br><span class="line"></span><br><span class="line">let f = null;</span><br><span class="line">f = Number(f);</span><br><span class="line"></span><br><span class="line">let g = undefined;</span><br><span class="line">g = Number(g);</span><br><span class="line"></span><br><span class="line">console.log(a, typeof b, b, c, d, e, f, g);</span><br><span class="line"></span><br><span class="line">//輸出      123 &quot;number&quot; NaN  NaN  0  1  0  NaN</span><br></pre></td></tr></table></figure>
+
+<p>接續來介紹，類似但是結果不同<br>parseInt( )<br>將字串轉換成一個<strong>整數</strong><br>parseInt解析的時候，從左至右讀取字串，直到讀取字串裡面所有的整數<br>字串的左邊第一個不是數字，則轉換為NaN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let a = &quot;32px&quot;;</span><br><span class="line">a = parseInt(a);</span><br><span class="line">console.log(a, typeof a);</span><br><span class="line"></span><br><span class="line">//輸出 32 &quot;number&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let b = &quot;3.14159265359&quot;;</span><br><span class="line">b = parseInt(b);</span><br><span class="line">console.log(b, typeof b);</span><br><span class="line"></span><br><span class="line">//輸出 3 &quot;number&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let c = &quot;hello77&quot;;</span><br><span class="line">c = parseInt(c);</span><br><span class="line">console.log(c, typeof c);</span><br><span class="line"></span><br><span class="line">//輸出 NaN &quot;number&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<p>參考mdn文件<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number</a></p>
 
     </div>
 
@@ -265,10 +263,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/posts/1b55fbbd/" rel="prev" title="Javascript 反引號使用方式">
+                  <i class="fa fa-angle-left"></i> Javascript 反引號使用方式
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/7a4fbd52/" rel="next" title="Javascript 原始資料類型">
-                  Javascript 原始資料類型 <i class="fa fa-angle-right"></i>
+                <a href="/posts/f1436175/" rel="next" title="Javascript 類型轉換 String( ) toString( )">
+                  Javascript 類型轉換 String( ) toString( ) <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

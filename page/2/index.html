@@ -23,7 +23,7 @@
     <meta name="description" content="部落格">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Finn&#39;s blog">
-<meta property="og:url" content="http://example.com/tags/javascript/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
 <meta property="og:description" content="部落格">
 <meta property="og:locale" content="zh_TW">
@@ -32,14 +32,14 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/tags/javascript/">
+<link rel="canonical" href="http://example.com/page/2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"tags/javascript/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>標籤: javascript | Finn's blog</title>
+<title>Finn's blog</title>
   
 
 
@@ -72,7 +72,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Finn's blog</p>
+      <h1 class="site-title">Finn's blog</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -160,130 +160,114 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/6b10133a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/20230829.jpg">
+      <meta itemprop="name" content="Finn Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finn's blog">
+      <meta itemprop="description" content="部落格">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Finn's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/6b10133a/" class="post-title-link" itemprop="url">Javascript 命名規範</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-11-28 21:09:34" itemprop="dateCreated datePublished" datetime="2023-11-28T21:09:34+08:00">2023-11-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-11-29 13:07:48" itemprop="dateModified" datetime="2023-11-29T13:07:48+08:00">2023-11-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">javascript
-          <small>標籤</small>
-        </h1>
-      </div>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在Javascript語法裡面<br>變數與常數命名方式要特別留意<br>不是所有的字都可以當作變數與常數的名稱，各位可以參考以下命名規則以及慣例</p>
+<ul>
+<li><p><strong>駝峰式命名方式Camel Case</strong>，譬如calculateTotalAmount、userName、lastName、getProductInfo、calculateTax，命名的一致性對於團隊合作的時候非常有幫助，也是JS的命名慣例。</p>
+</li>
+<li><p><strong>不可以使用Javascript保留字</strong>，因為這群保留字在javscript具有特殊的語法和意義，詳細資料請看最底下的保留字列表。</p>
+</li>
+<li><p><strong>不可以使用數字作為開頭</strong>。會造成程式碼的錯誤結果，假如有一個”123var”或是”6variable”的變數，這樣是錯的，會引發SyntaxError或是程式碼錯誤。</p>
+</li>
+<li><p><strong>可以使用下底線作為開頭</strong><br> _privateVariable、<br> _userProfileData、<br> _calculateTotalAmount、<br> _getProductInfoById，但是不同專案的狀況，還是要依據該專案的命名風格為主，以確保整個程式碼的一致性</p>
+</li>
+<li><p><strong>建議使用有意義的名稱</strong>，讓其他人一眼看到可以大概了解是什麼意思，在閱讀程式碼的時候，或是在維護程式的時候，可以更快更容易理解。</p>
+</li>
+<li><p><strong>避免使用縮寫</strong>，譬如:tAmt、dBase、Ncount，這樣無法釐清真實的意義，非常混淆</p>
+</li>
+<li><p><strong>名稱是區分大小寫的</strong>，大寫字母和小寫字母是不一樣的名稱，譬如:userAge 和 UserAge是不同的變數，它們具有不同的意義，<strong>但是請使用駝峰式命名 (Camel Case)為主</strong></p>
+</li>
+</ul>
+<p>保留字列表<br>1.break<br>2.case<br>3.catch<br>4.class<br>5.const<br>6.continue<br>7.debugger<br>8.default<br>9.delete<br>10.do<br>11.else<br>12.export<br>13.extends<br>14.false<br>15.finally<br>16.for<br>17.function<br>18.if<br>19.import<br>20.in<br>21.instanceof<br>22.new<br>23.null<br>24.return<br>25.super<br>26.switch<br>27.this<br>28.throw<br>29.true<br>30.try<br>31.typeof<br>32.var<br>33.void<br>34.while<br>35.with</p>
+<p>請參考mdn說明<br><a href="http://">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords</a></p>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T22:34:39+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-        <a class="post-title-link" href="/posts/f1436175/" itemprop="url">
-          <span itemprop="name">Javascript 類型轉換 String( ) toString( )</span>
-        </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T22:31:16+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
 
-      <div class="post-title">
-        <a class="post-title-link" href="/posts/25c96c7b/" itemprop="url">
-          <span itemprop="name">javascript 類型轉換 Number( ) parseInt( )</span>
-        </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T22:27:14+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/posts/1b55fbbd/" itemprop="url">
-          <span itemprop="name">Javascript 反引號使用方式</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T22:21:42+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/posts/7a4fbd52/" itemprop="url">
-          <span itemprop="name">Javascript 原始資料類型</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T21:09:34+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/posts/6b10133a/" itemprop="url">
-          <span itemprop="name">Javascript 命名規範</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一頁" aria-label="上一頁" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </div>
   </main>
