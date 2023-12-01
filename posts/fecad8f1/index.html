@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ruby on rails Routes是什麼?">
+<meta property="og:url" content="http://thekuen.com/posts/fecad8f1/index.html">
+<meta property="og:site_name" content="Finn&#39;s blog">
+<meta property="og:description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://thekuen.com/images/MVC.png">
+<meta property="article:published_time" content="2023-11-29T09:01:33.000Z">
+<meta property="article:modified_time" content="2023-12-01T00:11:28.194Z">
+<meta property="article:author" content="Finn Wu">
+<meta property="article:tag" content="ruby on rails">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thekuen.com/images/MVC.png">
+
+
+<link rel="canonical" href="http://thekuen.com/posts/fecad8f1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":"","permalink":"http://thekuen.com/posts/fecad8f1/","path":"posts/fecad8f1/","title":"Ruby on rails Routes是什麼?"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Ruby on rails Routes是什麼? | Finn's blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Finn's blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Routes%E7%9A%84%E8%A7%92%E8%89%B2"><span class="nav-number">1.</span> <span class="nav-text">Routes的角色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CRUD"><span class="nav-number">2.</span> <span class="nav-text">CRUD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A6%96%E9%A0%81%E7%9A%84Routes%E6%80%8E%E9%BA%BC%E5%AF%AB%E5%91%A2"><span class="nav-number">3.</span> <span class="nav-text">首頁的Routes怎麼寫呢?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8B%E8%B7%AF%E7%94%B1%EF%BC%8Cresources"><span class="nav-number">4.</span> <span class="nav-text">快速建立路由，resources</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Routes%E5%B7%A2%E7%8B%80%E8%A8%AD%E8%A8%88"><span class="nav-number">5.</span> <span class="nav-text">Routes巢狀設計</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E8%B7%AF%E5%BE%91%E9%81%B8%E9%A0%85-collection-member"><span class="nav-number">6.</span> <span class="nav-text">更多路徑選項(collection, member)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Finn Wu"
+      src="/images/20230829.jpg">
+  <p class="site-author-name" itemprop="name">Finn Wu</p>
+  <div class="site-description" itemprop="description">部落格</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thekuen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thekuen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:thekuen@gmail.com" title="E-Mail → mailto:thekuen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/fecad8f1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/20230829.jpg">
+      <meta itemprop="name" content="Finn Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finn's blog">
+      <meta itemprop="description" content="部落格">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Ruby on rails Routes是什麼? | Finn's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ruby on rails Routes是什麼?
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-11-29 17:01:33" itemprop="dateCreated datePublished" datetime="2023-11-29T17:01:33+08:00">2023-11-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-01 08:11:28" itemprop="dateModified" datetime="2023-12-01T08:11:28+08:00">2023-12-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ruby-on-rails/" itemprop="url" rel="index"><span itemprop="name">ruby on rails</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Routes的角色"><a href="#Routes的角色" class="headerlink" title="Routes的角色"></a>Routes的角色</h1><p>簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向<br>我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區<br>走一走很容易迷路</p>
+<span id="more"></span>
+
+<p>這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、奢持精品部等等</p>
+<p>找到部門之後，請部門提供相關的資料<br>Routes會導覽到某Controller，Controller的action幫你做事情；只要任一個沒有對應的話，會出現HTTP 404錯誤的訊息</p>
+<p><img src="/./images/MVC.png" alt="3"></p>
+<p>圖片來源<br><a target="_blank" rel="noopener" href="https://jaavion80.medium.com/the-ping-relationship-of-model-view-and-co-af7823133a7c">The Ping Relationship of Model, View, and Controller(MVC)</a></p>
+<p>之前文章講到  <a target="_blank" rel="noopener" href="http://thekuen.github.io/posts/22ef0a2a/">RESTful-API設計風格</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">HTTP方法</th>
+<th align="left">路徑</th>
+<th align="left">Controller</th>
+<th align="left">Action</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">GET</td>
+<td align="left">&#x2F;articles</td>
+<td align="left">ArticleController</td>
+<td align="left">index</td>
+<td align="left">文章列表</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">&#x2F;articles</td>
+<td align="left">ArticleController</td>
+<td align="left">create</td>
+<td align="left">新增文章</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">&#x2F;articles&#x2F;new</td>
+<td align="left">ArticleController</td>
+<td align="left">new</td>
+<td align="left">新增文章的頁面</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">&#x2F;articles&#x2F;:id&#x2F;edit</td>
+<td align="left">ArticleController</td>
+<td align="left">edit</td>
+<td align="left">編輯文章的頁面</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">&#x2F;articles&#x2F;:id</td>
+<td align="left">ArticleController</td>
+<td align="left">show</td>
+<td align="left">檢視單一文章</td>
+</tr>
+<tr>
+<td align="left">PATCH</td>
+<td align="left">&#x2F;articles&#x2F;:id</td>
+<td align="left">ArticleController</td>
+<td align="left">update</td>
+<td align="left">更新單一文章</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left">&#x2F;articles&#x2F;:id</td>
+<td align="left">ArticleController</td>
+<td align="left">update</td>
+<td align="left">更新單一文章</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left">&#x2F;articles&#x2F;:id</td>
+<td align="left">ArticleController</td>
+<td align="left">destroy</td>
+<td align="left">刪除單一文章</td>
+</tr>
+</tbody></table>
+<h1 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h1><p>CRUD是一個縮寫，代表著「Create」、「Read」、「Update」和「Delete」。這些動作通常是針對某個特定資源所作出的行為，例如建立資料、讀取資料、更新資料和刪除資料。而且在使用SQL資料庫和網站的API時也很常見。</p>
+<p>以下是一些CRUD的例子：</p>
+<ul>
+<li><strong>建立(Create)</strong> 在一個資料庫中新增一筆資料，例如建立一篇新的文章。</li>
+<li><strong>讀取(Read)</strong>  從一個資料庫中讀取資料，例如讀取一篇文章。</li>
+<li><strong>更新(Update)</strong> ：在一個資料庫中更新資料，例如更新一篇文章。</li>
+<li><strong>刪除(Delete)</strong> ：在一個資料庫中刪除資料，例如刪除一篇文章。</li>
+</ul>
+<p>Ruby on rails<br>會根據config&#x2F;routes.rb檔案的內容，找到對應的Controller裡面的Action</p>
+<p>to: 後面接的是Controller名稱 以及 #Action名稱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  &lt;!-- 建立文章列表 --&gt;</span><br><span class="line">  get &#x27;/articles&#x27;, to: &#x27;articles#index&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 新增文章的頁面(一個頁面可以填寫文章的資料，等於是一份表單可以填寫資料) --&gt;</span><br><span class="line">  get &#x27;/articles/new&#x27;, to: &#x27;articles#new&#x27;, as: &#x27;new_article&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 真正做新增，按下按鈕發送新增的動作 --&gt;</span><br><span class="line">  post &#x27;/articles&#x27;, to: &#x27;articles#create&#x27;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;!-- Routes有先後順序之分，次序愈前面，優先啟用，優先讀取 --&gt;</span><br><span class="line">  &lt;!-- show, edit, update, delete 藉由尋找id來對應文章，這些需要放在new路徑之後 --&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 建立每一篇文章呈現的頁面，另外as:可以自己定義名稱，就可以在view的地方，使用article_path來引用這個路徑，不擔心&#x27;/articles/:id&#x27;之後被怎麼修改。 --&gt;</span><br><span class="line">  get &#x27;/articles/:id&#x27;, to: &#x27;articles#show&#x27;, as: &#x27;article&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 編輯文章的頁面(一份表單可以填寫資料，但不是新增) --&gt;</span><br><span class="line">  get &#x27;/articles/:id/edit&#x27;, to: &#x27;articles#edit&#x27; , as: &#x27;edit_article&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 更新文章資料，按下按鈕發送更新的動作 --&gt;</span><br><span class="line">  patch &#x27;/articles/:id&#x27;, to: &#x27;articles#update&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 刪除文章資料，按下按鈕發送刪除的動作 --&gt;</span><br><span class="line">  delete &#x27;/articles/:id&#x27;, to: &#x27;articles#destroy&#x27;</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<h1 id="首頁的Routes怎麼寫呢"><a href="#首頁的Routes怎麼寫呢" class="headerlink" title="首頁的Routes怎麼寫呢?"></a>首頁的Routes怎麼寫呢?</h1><p>假設要把articles#index作為網站的首頁<br>有以下2種，通常選第1種，因為字面上更直覺</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  &lt;!-- 第1種 --&gt;</span><br><span class="line">  root &#x27;articles#index&#x27;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 第2種 --&gt;</span><br><span class="line">  get &#x27;/&#x27;, to: &#x27;articles#index&#x27;</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="快速建立路由，resources"><a href="#快速建立路由，resources" class="headerlink" title="快速建立路由，resources"></a>快速建立路由，resources</h1><p>另外Ruby on rails提供更快的方法建立Routes，使用 <strong>resources</strong></p>
+<p>首頁還是要自己設定喔，因為rails不知道你要哪一頁當作首頁</p>
+<p>譬如以下，可以生成剛剛那一堆Routes(7個Action)，節省很多時間</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  root &#x27;articles#index&#x27;</span><br><span class="line">  resources :articles</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>如果不小心寫成resource ?!</p>
+<p><strong>resource :articles</strong></p>
+<ul>
+<li>生成的路徑都不會帶上:id(show, edit, update, delete沒有id)</li>
+<li>不會有index頁面</li>
+</ul>
+<h1 id="Routes巢狀設計"><a href="#Routes巢狀設計" class="headerlink" title="Routes巢狀設計"></a>Routes巢狀設計</h1><p>假如每一篇文章底下都可以留言，Routes可以這樣寫</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  resources :articles do</span><br><span class="line">    resources :comments</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>每一篇文章會有自己的流水編號(id)，而且不會重複<br>每一則留言也會有自己的流水編號(id)，而且不會重複</p>
+<p>可是留言的部分，只需要部分的Action，我只要開特定幾個路徑</p>
+<p>留言不需要index，從文章的show頁面借來使用<br>留言需要新增，也就是create<br>留言不需要new，從文章的show頁面借來使用<br>留言不需要show功能<br>留言不開放edit功能<br>留言不開放update功能<br>留言需要刪除，也就是destroy；刪除的路徑不用綁在articles後面，根據留言的id，直接刪除即可</p>
+<p>所以可以這樣改寫，符合我要的需求</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  resources :articles do</span><br><span class="line">    resources :comments, only: [:create]</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  resources :comments, only: [:destroy]</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<h1 id="更多路徑選項-collection-member"><a href="#更多路徑選項-collection-member" class="headerlink" title="更多路徑選項(collection, member)"></a>更多路徑選項(collection, member)</h1><p>現在訂單order使用resources產生路徑</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  resources :orders</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>然後我想要增加路徑是用來檢視<strong>已經取消的訂單</strong><br>使用collection，&#x2F;orders，針對全部資源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  resources :orders do</span><br><span class="line">    collection do</span><br><span class="line">      get :cancelled</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>HTTP方法是GET<br>路徑是&#x2F;orders&#x2F;cancelled<br>Action是cancelled</p>
+<p>那如果是<strong>取消第2號訂單</strong> ，路徑要怎麼設計呢?<br>使用member，路徑會帶上id，&#x2F;orders&#x2F;:id&#x2F;，針對單一資源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Rails.application.routes.draw do</span><br><span class="line"></span><br><span class="line">  resources :orders do</span><br><span class="line">    member do</span><br><span class="line">      delete :cancel</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>HTTP方法是DELETE<br>路徑是&#x2F;orders&#x2F;:id&#x2F;cancel<br>Action是cancel</p>
+<p><em><strong>同一個Controller裡面的Action名稱不能重複，找不到對應的動作，會出現錯誤</strong></em></p>
+<p>參考資料<br><a target="_blank" rel="noopener" href="https://railsbook.tw/">為你自己學Ruby on Rails</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ruby-on-rails/" rel="tag"># ruby on rails</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d7cff5a7/" rel="prev" title="CORS運作方式 預檢請求(Preflight Request)">
+                  <i class="fa fa-angle-left"></i> CORS運作方式 預檢請求(Preflight Request)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/cd00aef5/" rel="next" title="Ruby on rails controller">
+                  Ruby on rails controller <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Finn Wu</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
