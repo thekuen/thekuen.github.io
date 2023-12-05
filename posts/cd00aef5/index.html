@@ -20,20 +20,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="寫了Routes之後 12345Rails.application.routes.draw do  resources :articlesend  現在來建立一個controller依照Ruby on rails的慣例，當初Routes怎麼命名的，Controller就怎麼命名這邊是articles 在終端機輸入指令 1$rails g controller articles  在controll">
+    <meta name="description" content="寫了Routes之後 12345Rails.application.routes.draw do  resources :articlesend  現在來建立一個controller依照Ruby on rails的慣例，當初Routes怎麼命名的，Controller就怎麼命名這邊是articles 在終端機輸入指令 1$rails g controller articles 在controlle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby on rails controller">
 <meta property="og:url" content="http://thekuen.com/posts/cd00aef5/index.html">
 <meta property="og:site_name" content="Finn&#39;s blog">
-<meta property="og:description" content="寫了Routes之後 12345Rails.application.routes.draw do  resources :articlesend  現在來建立一個controller依照Ruby on rails的慣例，當初Routes怎麼命名的，Controller就怎麼命名這邊是articles 在終端機輸入指令 1$rails g controller articles  在controll">
+<meta property="og:description" content="寫了Routes之後 12345Rails.application.routes.draw do  resources :articlesend  現在來建立一個controller依照Ruby on rails的慣例，當初Routes怎麼命名的，Controller就怎麼命名這邊是articles 在終端機輸入指令 1$rails g controller articles 在controlle">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="http://thekuen.com/images/controller-file.png">
+<meta property="og:image" content="http://thekuen.com/posts/cd00aef5/contro.png">
 <meta property="article:published_time" content="2023-11-30T09:44:34.000Z">
-<meta property="article:modified_time" content="2023-11-30T12:08:13.057Z">
+<meta property="article:modified_time" content="2023-12-05T09:52:59.829Z">
 <meta property="article:author" content="Finn Wu">
 <meta property="article:tag" content="ruby on rails">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://thekuen.com/images/controller-file.png">
+<meta name="twitter:image" content="http://thekuen.com/posts/cd00aef5/contro.png">
 
 
 <link rel="canonical" href="http://thekuen.com/posts/cd00aef5/">
@@ -121,7 +121,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Finn Wu"
-      src="/images/20230829.jpg">
+      src="/about/20230829.jpg">
   <p class="site-author-name" itemprop="name">Finn Wu</p>
   <div class="site-description" itemprop="description">部落格</div>
 </div>
@@ -129,18 +129,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -178,7 +178,7 @@
     <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/cd00aef5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20230829.jpg">
+      <meta itemprop="image" content="/about/20230829.jpg">
       <meta itemprop="name" content="Finn Wu">
     </span>
 
@@ -203,9 +203,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2023-11-30 17:44:34 / 修改時間：20:08:13" itemprop="dateCreated datePublished" datetime="2023-11-30T17:44:34+08:00">2023-11-30</time>
+      <time title="創建時間：2023-11-30 17:44:34" itemprop="dateCreated datePublished" datetime="2023-11-30T17:44:34+08:00">2023-11-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-05 17:52:59" itemprop="dateModified" datetime="2023-12-05T17:52:59+08:00">2023-12-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,10 +238,20 @@
 <p>現在來建立一個controller<br>依照Ruby on rails的慣例，當初Routes怎麼命名的，Controller就怎麼命名<br>這邊是articles</p>
 <p>在終端機輸入指令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$rails g controller articles</span><br></pre></td></tr></table></figure>
-
 <p>在controllers&#x2F;<br>就會生成articles_controller.rb這個檔案</p>
-<p><img src="/./images/controller-file.png" alt="3"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">class ArticlesController &lt; ApplicationController</span><br><span class="line">    before_action :set_article, only:[:show]</span><br><span class="line">    before_action :set_user_article, only:[:edit, :update, :destroy]</span><br><span class="line">    before_action :authenticate_user!, except: [:index, :show, :unlock]</span><br><span class="line"></span><br><span class="line">    def set_article</span><br><span class="line">      @article = Article.find(params[:id])</span><br><span class="line">      # 如果有上鎖，但session[:article]裡沒有id，就踢回文章列表</span><br><span class="line">        if @article.password.present?</span><br><span class="line">         redirect_to root_path if not can_read?(params[:id])</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def can_read?(id)</span><br><span class="line">       session[:article]&amp;.include?(id)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def set_user_article</span><br><span class="line">      @article = current_user.articles.find(params[:id])</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def index</span><br><span class="line">        #@articles = Article.all.order(id: :desc)</span><br><span class="line">        @articles = Article.includes(:user).order(id: :desc)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def new</span><br><span class="line">        #實體變數</span><br><span class="line">        @article = Article.new</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def article_params</span><br><span class="line">        params.require(:article)</span><br><span class="line">              .permit(:title, :sub_title, :content, :password)</span><br><span class="line">              #.merge(:user)????</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def create</span><br><span class="line">        #@article = Article.new(article_params)</span><br><span class="line">        @article = current_user.articles.new(article_params)</span><br><span class="line">        #會帶入current_user的資料在articles裡面</span><br><span class="line"></span><br><span class="line">        #寫入資料庫</span><br><span class="line">        #Strong paramenter</span><br><span class="line">        #clean_params= params.require(:cc).permit(:title, :coutent)</span><br><span class="line">        if @article.save</span><br><span class="line">            redirect_to &quot;/articles&quot;</span><br><span class="line">            flash[:notice] = &quot;文章新增成功&quot;</span><br><span class="line">        else</span><br><span class="line">           render :new</span><br><span class="line">        end</span><br><span class="line">        #article = Article.new(title: params:[:cc][:title],</span><br><span class="line">                          #content: params[:cc] [:content])</span><br><span class="line">        #article.save</span><br><span class="line"></span><br><span class="line">        #cc = Article.new</span><br><span class="line">        #cc.title = params[:cc][:title]</span><br><span class="line">        #cc.content = params[:cc][:content]</span><br><span class="line">        #cc.save</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def show</span><br><span class="line">        @comment = Comment.new</span><br><span class="line">        @comments = @article.comments.order(id: :desc)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def edit</span><br><span class="line">        @article = Article.find(params[:id])</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def update</span><br><span class="line">        @article = Article.find(params[:id])</span><br><span class="line">        if @article.update(article_params)</span><br><span class="line">            redirect_to articles_path, notice: &#x27;更新成功&#x27;</span><br><span class="line">        else</span><br><span class="line">            render :edit</span><br><span class="line">        end</span><br><span class="line"></span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def destroy</span><br><span class="line">        #@article = Article.find(params[:id])</span><br><span class="line">        @article.destroy</span><br><span class="line">        redirect_to articles_path, notice: &#x27;刪除成功&#x27;</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>相反地，如果要刪除controller，使用以下指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$rails d controller 名稱</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/posts/cd00aef5/contro.png" alt="controller"></p>
+<span id="more"></span>
+
+
+<p>剛剛建立controller articles如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">class ArticlesController &lt; ApplicationController</span><br><span class="line">    # before_action可以針對某幾個action的部分, 先執行set_article方法以及set_user_article方法；這些自己定義的方法寫在private底下</span><br><span class="line">    before_action :set_article, only:[:show, :edit, :update, :destroy]</span><br><span class="line"></span><br><span class="line">    def index</span><br><span class="line">        # 使用實體變數@articles，讓所有的文章可以呈現在index頁面</span><br><span class="line">        # desc是新文章到舊文章排序；預設asc是舊到新排序</span><br><span class="line">        @articles = Article.order(id: :desc)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def new</span><br><span class="line">        # 在new的方法裡面，做實體變數@article，連動實體變數</span><br><span class="line">        @article = Article.new</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def create</span><br><span class="line">        # 自己不需要view，借別人頁面使用，實體變數@articles，可以將@articles的資料呈現</span><br><span class="line">        @article = Article.new(article_params)</span><br><span class="line"></span><br><span class="line">        # 寫入資料庫裡面，存入資料庫成功的話，給一個視窗提醒使用者&quot;文章新增成功&quot;</span><br><span class="line">        if @article.save</span><br><span class="line">            redirect_to &quot;/articles&quot;</span><br><span class="line">            flash[:notice] = &quot;文章新增成功&quot;</span><br><span class="line">        else</span><br><span class="line">           # 存入資料庫失敗的話，把new頁面渲染出來，填寫過的資料欄位會保留在頁面上</span><br><span class="line">           render :new</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def show</span><br><span class="line">        # 要找到該文章的id</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def edit</span><br><span class="line">        # 要找到該文章的id</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def update</span><br><span class="line">        # 自己不需要view</span><br><span class="line">        # 先找到該文章的id，找到之後，更新文章裡面的資料</span><br><span class="line"></span><br><span class="line">        if @article.update(article_params)</span><br><span class="line">            # 更新成功的話，給一個視窗提醒使用者&quot;更新成功&quot;</span><br><span class="line">            redirect_to articles_path, notice: &#x27;更新成功&#x27;</span><br><span class="line">        else</span><br><span class="line">            # 更新失敗的話，把new頁面渲染出來，填寫過的資料欄位會保留在頁面上</span><br><span class="line">            render :edit</span><br><span class="line">        end</span><br><span class="line"></span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def destroy</span><br><span class="line">       # 自己不需要view</span><br><span class="line">       # 要找到該文章的id，找到之後，刪除該文章</span><br><span class="line">        @article.destroy</span><br><span class="line">        redirect_to articles_path, notice: &#x27;刪除成功&#x27;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    private</span><br><span class="line"></span><br><span class="line">    def article_params</span><br><span class="line">        params.require(:article)</span><br><span class="line">              .permit(:title, :sub_title, :content)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def set_article</span><br><span class="line">      @article = Article.find(params[:id])</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>:show, :edit, :update, :destroy這些Action<br>都需要做@article &#x3D; Article.find(params[:id])，找文章id的動作一直重複做<br>所以我們自己做了一個方法叫set_article，在多個Action共享相同的邏輯<br>另外<br>這方法放在private底下，只能在ArticlesController這個類別使用，避免被其他的controller</p>
+
     </div>
 
     
@@ -256,6 +272,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/posts/32ff77bd/" rel="next" title="初嘗 Javascript React的奧妙">
+                  初嘗 Javascript React的奧妙 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
