@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol  當將一個Value">
+    <meta name="description" content="在Javascript程式語言，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Reference type以及Value type">
 <meta property="og:url" content="http://thekuen.com/posts/b7ca6180/index.html">
 <meta property="og:site_name" content="Feng&#39;s blog">
-<meta property="og:description" content="在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol  當將一個Value">
+<meta property="og:description" content="在Javascript程式語言，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-12-04T04:57:48.000Z">
-<meta property="article:modified_time" content="2023-12-18T10:30:25.381Z">
+<meta property="article:modified_time" content="2023-12-18T10:33:49.627Z">
 <meta property="article:author" content="Feng">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="程式基礎">
@@ -211,7 +211,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-18 18:30:25" itemprop="dateModified" datetime="2023-12-18T18:30:25+08:00">2023-12-18</time>
+      <time title="修改時間：2023-12-18 18:33:49" itemprop="dateModified" datetime="2023-12-18T18:33:49+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,7 +232,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。</p>
+    <div class="post-body" itemprop="articleBody"><p>在Javascript程式語言，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。</p>
 <h1 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h1><p>儲存的是數據本身<br>資料存放於Stack</p>
 <p>Value type變數，這個變數會儲存數據本身</p>
 <p>Value type有以下資料型態</p>
@@ -245,7 +245,7 @@
 <li>symbol</li>
 </ul>
 <p>當將一個Value type變數賦值給另一個變數時，將複製實際的數據</p>
-<p>用javascript舉例子</p>
+<p>用Javascript舉例子</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 10</span><br><span class="line">let b = a</span><br><span class="line">b = b + 1</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 10</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 11</span><br></pre></td></tr></table></figure>
 
 
@@ -257,7 +257,7 @@
 <li>array</li>
 </ul>
 <p>當一個reference type的變數賦值給另一個變數時，它們將指向同樣的記憶體位置</p>
-<p>用javascript舉例子</p>
+<p>用Javascript舉例子</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = [1,2,3]</span><br><span class="line">let b = a</span><br><span class="line">b.push(7)</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 1,2,3,7</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 1,2,3,7</span><br></pre></td></tr></table></figure>
 <p>這個例子中<br>變數a是array陣列，變數a屬於reference type，儲存的是記憶體位置<br>a賦值給b，它們兩個變數指向同一個記憶體位置<br>變數b加進7之後<br>最終，a和b指向的記憶體位置的數值變成[1,2,3,7]</p>
 
