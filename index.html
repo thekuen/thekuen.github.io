@@ -125,18 +125,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -161,6 +161,98 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/2f51161a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/about/20230829.jpg">
+      <meta itemprop="name" content="Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng's blog">
+      <meta itemprop="description" content="部落格">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Feng's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/2f51161a/" class="post-title-link" itemprop="url">物件、類別傻傻搞不清楚?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-12-02 07:53:21" itemprop="dateCreated datePublished" datetime="2023-12-02T07:53:21+08:00">2023-12-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-18 11:07:47" itemprop="dateModified" datetime="2023-12-18T11:07:47+08:00">2023-12-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OOP/" itemprop="url" rel="index"><span itemprop="name">OOP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="什麼是物件Object"><a href="#什麼是物件Object" class="headerlink" title="什麼是物件Object?"></a>什麼是物件Object?</h1><p>物件是從類別Class所創造出來的實體Instance<br>每個物件都有自己的狀態State(由類別的屬性定義)和行為Behavior(由類別的方法定義)。<br>有了類別之後，就可以做很多不同的物件</p>
+<h1 id="什麼是類別Class"><a href="#什麼是類別Class" class="headerlink" title="什麼是類別Class?"></a>什麼是類別Class?</h1><p>譬如一隻貓可以是一種類別，<br>物件的狀態，有貓的”毛色”以及”品種”<br>物件的行為，有貓的”聲音”</p>
+<p>用Ruby on rails來舉一個例子，幫助了解實際的運用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#定義一個類別</span><br><span class="line">class Cat</span><br><span class="line"></span><br><span class="line">  #initialize可以定義類別屬性</span><br><span class="line">  def initialize(name, breed, color)</span><br><span class="line">  @name = name</span><br><span class="line">  @breed = breed</span><br><span class="line">  @color = color</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  #定義一個類別方法，是貓的行為</span><br><span class="line">  def sound</span><br><span class="line">  &quot;meow meow&quot;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  #定義一個類別方法</span><br><span class="line">  def check_info</span><br><span class="line">    &quot;My name is #&#123;@name&#125;,I&#x27;m #&#123;@breed&#125;,my color is #&#123;@color&#125;&quot;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#接下來，從貓類別創造出不同的物件</span><br><span class="line">cat1 = Cat.new(&quot;Jane&quot;,&quot;Mix&quot;,&quot;Orange&quot;)</span><br><span class="line">cat2 = Cat.new(&quot;Olive&quot;,&quot;Munchkin&quot;,&quot;Grey&quot;, )</span><br><span class="line">cat3 = Cat.new(&quot;Cliff&quot;,&quot;Siamese&quot;,&quot;White&quot;)</span><br><span class="line"></span><br><span class="line"># 調用物件身上的方法</span><br><span class="line">puts cat1.sound #meow meow</span><br><span class="line">puts cat2.check_info # My name is Olive,I&#x27;m  Munchkin,my color is Grey&quot;</span><br></pre></td></tr></table></figure>
+
+<p>這樣就完成了Cat類別，<br>有@name、@breed、@color總共3個實體變數，<br>定義貓的名字、品種、顏色；<br>有sound方法、check_info方法<br>知道貓類別的聲音<br>知道貓類別的基本資訊<br>每個物件都有屬於自己的狀態和行為<br>也可以呼叫方法</p>
+<p>參考資料</p>
+<p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10187385">類別(Class)與模組(Module)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -566,9 +658,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2023-11-29 09:28:29 / 修改時間：15:22:40" itemprop="dateCreated datePublished" datetime="2023-11-29T09:28:29+08:00">2023-11-29</time>
+      <time title="創建時間：2023-11-29 09:28:29" itemprop="dateCreated datePublished" datetime="2023-11-29T09:28:29+08:00">2023-11-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-18 11:07:19" itemprop="dateModified" datetime="2023-12-18T11:07:19+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -900,7 +998,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/f1436175/">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/8f0fc967/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/about/20230829.jpg">
@@ -918,7 +1016,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/f1436175/" class="post-title-link" itemprop="url">Javascript 類型轉換 String( ) toString( )</a>
+          <a href="/posts/8f0fc967/" class="post-title-link" itemprop="url">MVC架構</a>
         </h2>
 
         <div class="post-meta-container">
@@ -929,14 +1027,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2023-11-28 22:34:39" itemprop="dateCreated datePublished" datetime="2023-11-28T22:34:39+08:00">2023-11-28</time>
+      <time title="創建時間：2023-11-28 22:37:13" itemprop="dateCreated datePublished" datetime="2023-11-28T22:37:13+08:00">2023-11-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 15:25:00" itemprop="dateModified" datetime="2023-11-29T15:25:00+08:00">2023-11-29</time>
+      <time title="修改時間：2023-12-18 11:07:32" itemprop="dateModified" datetime="2023-12-18T11:07:32+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -944,7 +1042,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/categories/MVC/" itemprop="url" rel="index"><span itemprop="name">MVC</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ruby-on-rails/" itemprop="url" rel="index"><span itemprop="name">ruby on rails</span></a>
         </span>
     </span>
 
@@ -958,102 +1060,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>將資料類型轉換為字串類型<br>先介紹toString()<br>數值、布林值，可以利用toString()轉換成字串，根據原型資料去創造一個字串</p>
+          <p>很多程式語言都有框架來實現MVC架構<br>例如: Java, Python, Ruby, PHP</p>
+<p><img src="/./ruby-on-rails-routes/MVC.png" alt="MVC"></p>
+<p>圖片來源<br><a target="_blank" rel="noopener" href="https://jaavion80.medium.com/the-ping-relationship-of-model-view-and-co-af7823133a7c">The Ping Relationship of Model, View, and Controller(MVC)</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/f1436175/" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/25c96c7b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/about/20230829.jpg">
-      <meta itemprop="name" content="Feng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Feng's blog">
-      <meta itemprop="description" content="部落格">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Feng's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/25c96c7b/" class="post-title-link" itemprop="url">Javascript 類型轉換 Number( ) parseInt( )</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2023-11-28 22:31:16" itemprop="dateCreated datePublished" datetime="2023-11-28T22:31:16+08:00">2023-11-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-29 15:23:22" itemprop="dateModified" datetime="2023-11-29T15:23:22+08:00">2023-11-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Number( )<br>可以將其他的類型轉換成<code>number</code></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/25c96c7b/" rel="contents">
+              <a class="btn" href="/posts/8f0fc967/" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
