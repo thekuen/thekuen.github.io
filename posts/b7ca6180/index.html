@@ -20,28 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Javascript主流框架：React、Vue、Angular三分天下">
+    <meta name="description" content="在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol  當將一個Value">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初嘗 Javascript React的奧妙">
-<meta property="og:url" content="http://thekuen.com/posts/32ff77bd/index.html">
+<meta property="og:title" content="Reference type以及Value type">
+<meta property="og:url" content="http://thekuen.com/posts/b7ca6180/index.html">
 <meta property="og:site_name" content="Feng&#39;s blog">
-<meta property="og:description" content="Javascript主流框架：React、Vue、Angular三分天下">
+<meta property="og:description" content="在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。 Value Type儲存的是數據本身資料存放於Stack Value type變數，這個變數會儲存數據本身 Value type有以下資料型態  number(包括整數、浮點數) string boolean undefined null symbol  當將一個Value">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-12-01T00:47:27.000Z">
-<meta property="article:modified_time" content="2023-12-06T01:42:23.553Z">
+<meta property="article:published_time" content="2023-12-04T04:57:48.000Z">
+<meta property="article:modified_time" content="2023-12-18T10:30:25.381Z">
 <meta property="article:author" content="Feng">
-<meta property="article:tag" content="react">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="程式基礎">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://thekuen.com/posts/32ff77bd/">
+<link rel="canonical" href="http://thekuen.com/posts/b7ca6180/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://thekuen.com/posts/32ff77bd/","path":"posts/32ff77bd/","title":"初嘗 Javascript React的奧妙"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://thekuen.com/posts/b7ca6180/","path":"posts/b7ca6180/","title":"Reference type以及Value type"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>初嘗 Javascript React的奧妙 | Feng's blog</title>
+<title>Reference type以及Value type | Feng's blog</title>
   
 
 
@@ -100,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -113,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Value-Type"><span class="nav-number">1.</span> <span class="nav-text">Value Type</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference-Type"><span class="nav-number">2.</span> <span class="nav-text">Reference Type</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -173,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/32ff77bd/">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/b7ca6180/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/about/20230829.jpg">
@@ -186,12 +188,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="初嘗 Javascript React的奧妙 | Feng's blog">
+      <meta itemprop="name" content="Reference type以及Value type | Feng's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          初嘗 Javascript React的奧妙
+          Reference type以及Value type
         </h1>
 
         <div class="post-meta-container">
@@ -202,14 +204,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2023-12-01 08:47:27" itemprop="dateCreated datePublished" datetime="2023-12-01T08:47:27+08:00">2023-12-01</time>
+      <time title="創建時間：2023-12-04 12:57:48" itemprop="dateCreated datePublished" datetime="2023-12-04T12:57:48+08:00">2023-12-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-06 09:42:23" itemprop="dateModified" datetime="2023-12-06T09:42:23+08:00">2023-12-06</time>
+      <time title="修改時間：2023-12-18 18:30:25" itemprop="dateModified" datetime="2023-12-18T18:30:25+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -217,7 +219,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+          <a href="/categories/%E7%A8%8B%E5%BC%8F%E5%9F%BA%E7%A4%8E/" itemprop="url" rel="index"><span itemprop="name">程式基礎</span></a>
         </span>
     </span>
 
@@ -230,16 +232,34 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Javascript主流框架：React、Vue、Angular三分天下</p>
-<span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><p>在程式設計中，Reference Type和Value Type是兩種不同的資料型別，它們在記憶體中的儲存和操作方式不相同。</p>
+<h1 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h1><p>儲存的是數據本身<br>資料存放於Stack</p>
+<p>Value type變數，這個變數會儲存數據本身</p>
+<p>Value type有以下資料型態</p>
+<ul>
+<li>number(包括整數、浮點數)</li>
+<li>string</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>null</li>
+<li>symbol</li>
+</ul>
+<p>當將一個Value type變數賦值給另一個變數時，將複製實際的數據</p>
+<p>用javascript舉例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 10</span><br><span class="line">let b = a</span><br><span class="line">b = b + 1</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 10</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 11</span><br></pre></td></tr></table></figure>
 
-<p>這次很興奮決定進修React</p>
-<p>“學會React，年薪百萬”<br>認識奶綠茶老師的人，沒有人不知道這一句話，當初被深深吸引就像是Kpop的洗腦歌曲一樣，參加了React入門課程。Javascript框架這麼多，究竟React有什麼過人之處，國內外大型企業紛紛採用React，開出大量相關職缺，薪資也十分誘人。</p>
-<p>一般來說，原生Javascript操作DOM，導致瀏覽器重新渲染一次，假設同時要操作網頁上很多DOM，就會產生效率低的問題；而React利用Virtual DOM，將Virtual DOM做比較，看哪個部分有改變，有改變的部分才做更新，提高效率；而不是像原生Javascript資料重新渲染，萬一有100筆資料就重新渲染100筆。</p>
-<p>在這4堂的課程中，奶綠茶老師精心準備50題以上情境範例，讓學生可以快速了解React的操作，React components的基礎概念、Props傳遞的方式、當然還有Hooks如何應用，包括有useState、useEffect、useMemo、useCallnback等等。另外老師有講到比對DOM的source code，官方文件是怎麼寫的，我覺得收穫很多。</p>
-<p>奶綠茶老師最棒的地方，聽不懂的地方都可以提問，面對面即時回覆，下課結束之後對於課程內容，也可以透過訊息問老師，老師也很有耐心，雖然我不是全盤掌握React，畢竟React版本持續在更新，現在已經到React 18，但掌握到核心觀念，之後幫助我理解進階的語法。</p>
-<p>對課程有興趣的朋友可以參考以下連結，會不定時開課</p>
-<p><a target="_blank" rel="noopener" href="https://5xcampus.com/" title="五倍學院">五倍學院</a></p>
+
+<h1 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h1><p>儲存的是記憶體位置<br>資料存放於Heap</p>
+<p>Reference type有以下資料型態</p>
+<ul>
+<li>object(包括class)</li>
+<li>function</li>
+<li>array</li>
+</ul>
+<p>當一個reference type的變數賦值給另一個變數時，它們將指向同樣的記憶體位置</p>
+<p>用javascript舉例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = [1,2,3]</span><br><span class="line">let b = a</span><br><span class="line">b.push(7)</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 1,2,3,7</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 1,2,3,7</span><br></pre></td></tr></table></figure>
+<p>這個例子中<br>變數a是array陣列，變數a屬於reference type，儲存的是記憶體位置<br>a賦值給b，它們兩個變數指向同一個記憶體位置<br>變數b加進7之後<br>最終，a和b指向的記憶體位置的數值變成[1,2,3,7]</p>
 
     </div>
 
@@ -249,21 +269,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/react/" rel="tag"># react</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/%E7%A8%8B%E5%BC%8F%E5%9F%BA%E7%A4%8E/" rel="tag"># 程式基礎</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/cd00aef5/" rel="prev" title="Ruby on rails controller">
-                  <i class="fa fa-angle-left"></i> Ruby on rails controller
+                <a href="/posts/a0c6ee9c/" rel="prev" title="實作函數，將陣列中的奇數數字做加總">
+                  <i class="fa fa-angle-left"></i> 實作函數，將陣列中的奇數數字做加總
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/2f51161a/" rel="next" title="物件、類別傻傻搞不清楚?">
-                  物件、類別傻傻搞不清楚? <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
