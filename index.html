@@ -206,7 +206,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-18 18:33:49" itemprop="dateModified" datetime="2023-12-18T18:33:49+08:00">2023-12-18</time>
+      <time title="修改時間：2023-12-18 19:15:41" itemprop="dateModified" datetime="2023-12-18T19:15:41+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -245,6 +245,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 10</span><br><span class="line">let b = a</span><br><span class="line">b = b + 1</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 10</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 11</span><br></pre></td></tr></table></figure>
 
 
+
+
 <h1 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h1><p>儲存的是記憶體位置<br>資料存放於Heap</p>
 <p>Reference type有以下資料型態</p>
 <ul>
@@ -256,6 +258,13 @@
 <p>用Javascript舉例子</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = [1,2,3]</span><br><span class="line">let b = a</span><br><span class="line">b.push(7)</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 1,2,3,7</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 1,2,3,7</span><br></pre></td></tr></table></figure>
 <p>這個例子中<br>變數a是array陣列，變數a屬於reference type，儲存的是記憶體位置<br>a賦值給b，它們兩個變數指向同一個記憶體位置<br>變數b加進7之後<br>最終，a和b指向的記憶體位置的數值變成[1,2,3,7]</p>
+<p>另外<br>我們可以用”比較運算符”去測試<br>&#x3D;&#x3D;&#x3D; 值和類型這2個是否完全相等<br>&#x3D;&#x3D;  值是否相等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let c = [4,5]</span><br><span class="line">let d = [4,5]</span><br><span class="line"></span><br><span class="line">console.log(c === d)  //false</span><br><span class="line">console.log(c == d)  //false</span><br></pre></td></tr></table></figure>
+
+<h3 id="這個例子中，為什麼c怎麼樣都不等於d"><a href="#這個例子中，為什麼c怎麼樣都不等於d" class="headerlink" title="這個例子中，為什麼c怎麼樣都不等於d?"></a>這個例子中，為什麼c怎麼樣都不等於d?</h3><p>由於array陣列是Reference Type<br>&#x3D;&#x3D;&#x3D;和&#x3D;&#x3D;變成比較的是記憶體位置<br>c的記憶體位置和d的記憶體位置完全不同<br>所以都是false</p>
+<p>除非改成以下程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let c = [4,5]</span><br><span class="line">let d = c</span><br><span class="line"></span><br><span class="line">console.log(c === d)  //true</span><br><span class="line">console.log(c == d)  //true</span><br></pre></td></tr></table></figure>
+<p>將變數c賦值給變數d，它們指向同一個記憶體位置</p>
 
       
     </div>
