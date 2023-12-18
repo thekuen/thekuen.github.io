@@ -20,16 +20,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路 這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、奢持精品部等等 找到部門之後，請部門提供相關的資料Routes會導覽到某Controller，Controller的action幫">
+    <meta name="description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路 這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、精品部等等 找到部門之後，請部門提供相關的資料Routes會導覽到某Controller，Controller的action幫你做">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby on rails Routes是什麼?">
 <meta property="og:url" content="http://thekuen.com/posts/fecad8f1/index.html">
 <meta property="og:site_name" content="Feng&#39;s blog">
-<meta property="og:description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路 這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、奢持精品部等等 找到部門之後，請部門提供相關的資料Routes會導覽到某Controller，Controller的action幫">
+<meta property="og:description" content="Routes的角色簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區走一走很容易迷路 這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、精品部等等 找到部門之後，請部門提供相關的資料Routes會導覽到某Controller，Controller的action幫你做">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://thekuen.com/posts/fecad8f1/MVC.png">
 <meta property="article:published_time" content="2023-11-29T09:01:33.000Z">
-<meta property="article:modified_time" content="2023-12-05T01:30:30.840Z">
+<meta property="article:modified_time" content="2023-12-18T03:32:30.964Z">
 <meta property="article:author" content="Feng">
 <meta property="article:tag" content="ruby on rails">
 <meta name="twitter:card" content="summary">
@@ -130,13 +130,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -212,7 +212,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-05 09:30:30" itemprop="dateModified" datetime="2023-12-05T09:30:30+08:00">2023-12-05</time>
+      <time title="修改時間：2023-12-18 11:32:30" itemprop="dateModified" datetime="2023-12-18T11:32:30+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -234,7 +234,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="Routes的角色"><a href="#Routes的角色" class="headerlink" title="Routes的角色"></a>Routes的角色</h1><p>簡單來說，Routes就像是服務台一樣，讓所有來拜訪的使用者指引方向<br>我拿華泰名品城做為比喻，華泰名品城這麼大的園區，有一期二期三期園區<br>走一走很容易迷路</p>
-<p>這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、奢持精品部等等</p>
+<p>這時候就需要服務台幫忙，櫃台會依據使用者的需求，詢問對應的部門，美食餐飲部、電影娛樂部、顧客服務部、精品部等等</p>
 <p>找到部門之後，請部門提供相關的資料<br>Routes會導覽到某Controller，Controller的action幫你做事情；只要任一個沒有對應的話，會出現HTTP 404錯誤的訊息</p>
 <p><img src="/posts/fecad8f1/MVC.png" alt="MVC"></p>
 <span id="more"></span>
