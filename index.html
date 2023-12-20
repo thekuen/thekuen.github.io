@@ -125,7 +125,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -161,6 +161,112 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/4b698999/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/about/20230829.jpg">
+      <meta itemprop="name" content="Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng's blog">
+      <meta itemprop="description" content="部落格">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Feng's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/4b698999/" class="post-title-link" itemprop="url">物件導向的特色</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-12-05 16:22:29" itemprop="dateCreated datePublished" datetime="2023-12-05T16:22:29+08:00">2023-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-20 19:16:35" itemprop="dateModified" datetime="2023-12-20T19:16:35+08:00">2023-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91OOP/" itemprop="url" rel="index"><span itemprop="name">物件導向OOP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="物件導向的特色"><a href="#物件導向的特色" class="headerlink" title="物件導向的特色"></a>物件導向的特色</h1><p>常常聽到別人說物件導向、物件導向，一直以來都搞不懂，而且在實作的時候不容易察覺到<br>今天就來介紹物件導向的幾個特色</p>
+<ul>
+<li>封裝(Encapsulation)</li>
+<li>繼承(Inheriitance)</li>
+<li>多型(Polymorphism)</li>
+</ul>
+<h2 id="封裝-Encapsulation"><a href="#封裝-Encapsulation" class="headerlink" title="封裝(Encapsulation)"></a>封裝(Encapsulation)</h2><p>封裝是，只公開必要的介面，強迫外部的使用者只能透過介面做溝通，隱藏內部的資料或是邏輯，<br>無法干涉也無法看見內部的細節，而不需要了解物件內部是怎麼運作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Cat</span><br><span class="line">  #initialize可以定義類別屬性</span><br><span class="line">  def initialize(name)</span><br><span class="line">  @name = name</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  #定義一個類別方法，公開的方法，發出聲音的方法，是貓的行為</span><br><span class="line">  def sound</span><br><span class="line">  &quot;meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">#產生一個貓的物件，名字是Lily</span><br><span class="line">cat1 = Cat.new(&quot;Lily&quot;)</span><br><span class="line"></span><br><span class="line">#呼叫公開的方法</span><br><span class="line">puts cat1.sound</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>貓的類別裡面<br>有貓的屬性<br>有一個貓的公開方法sound<br>封裝就是把屬性和方法包裝在一個單元裡面，外部可以透過物件來呼叫這個方法，讓貓發出聲音，但是外部的使用者不知道貓是如何發出的</p>
+<h2 id="繼承-Inheriitance"><a href="#繼承-Inheriitance" class="headerlink" title="繼承(Inheriitance)"></a>繼承(Inheriitance)</h2><p>允許子類別(subclass)可以繼承另一個父類別(superclass)，去繼承父類別的屬性和方法。<br>重複性的類別在父類別上定義，子類別就可以做細節的屬性以及方法，這樣有益於代碼重用和建立結構化的層級。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">  def sound</span><br><span class="line">    puts &quot;Animals can produce sounds&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Cat &lt; Animal</span><br><span class="line">  def speak</span><br><span class="line">    puts &quot;cat meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">cat2 = Cat.new</span><br><span class="line">cat2.speak # cat meow meow</span><br></pre></td></tr></table></figure>
+
+<h2 id="多型-Polymorphism"><a href="#多型-Polymorphism" class="headerlink" title="多型(Polymorphism)"></a>多型(Polymorphism)</h2><p>意思是名稱完全相同的方法，但是根據傳入不同的參數，而有執行不同的動作</p>
+<ol>
+<li><p>多載(Overloading)</p>
+</li>
+<li><p>複寫(Overriding)</p>
+</li>
+</ol>
+<h3 id="以複寫作為範例-使用ruby-on-rails"><a href="#以複寫作為範例-使用ruby-on-rails" class="headerlink" title="以複寫作為範例(使用ruby on rails)"></a>以複寫作為範例(使用ruby on rails)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Animals can produce sounds&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Dog &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Dog howl howl&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Cat &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Cat meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Pig &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Pig oink oink&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># 建立動物的陣列</span><br><span class="line">animals = [Dog.new, Cat.new, Pig.new]</span><br><span class="line"></span><br><span class="line"># 讓每種動物發出聲音</span><br><span class="line">animals.each do |animal|</span><br><span class="line">  puts animal.sound</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>建立了一個父類別Animal類別，讓Dog、Cat、Pig都繼承這個父類別<br>接下來，在各個子類別複寫sound方法，更細部描述每種動物的聲音<br>最後產生一個陣列包含不同動物的物件，使用迴圈讓每個動物發出聲音<br>不同類別的物件可以呼叫相同的方法sound，但根據物件的實際類別而執行不同的動作</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -206,7 +312,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-18 19:15:41" itemprop="dateModified" datetime="2023-12-18T19:15:41+08:00">2023-12-18</time>
+      <time title="修改時間：2023-12-18 19:32:52" itemprop="dateModified" datetime="2023-12-18T19:32:52+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,8 +349,6 @@
 <p>當將一個Value type變數賦值給另一個變數時，將複製實際的數據</p>
 <p>用Javascript舉例子</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 10</span><br><span class="line">let b = a</span><br><span class="line">b = b + 1</span><br><span class="line"></span><br><span class="line">console.log(`a = $&#123;a&#125;`)  //印出a = 10</span><br><span class="line">console.log(`b = $&#123;b&#125;`)  //印出b = 11</span><br></pre></td></tr></table></figure>
-
-
 
 
 <h1 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h1><p>儲存的是記憶體位置<br>資料存放於Heap</p>
@@ -426,7 +530,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-18 11:32:15" itemprop="dateModified" datetime="2023-12-18T11:32:15+08:00">2023-12-18</time>
+      <time title="修改時間：2023-12-20 19:16:55" itemprop="dateModified" datetime="2023-12-20T19:16:55+08:00">2023-12-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -434,7 +538,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OOP/" itemprop="url" rel="index"><span itemprop="name">OOP</span></a>
+          <a href="/categories/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91OOP/" itemprop="url" rel="index"><span itemprop="name">物件導向OOP</span></a>
         </span>
     </span>
 
@@ -518,7 +622,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-06 09:42:23" itemprop="dateModified" datetime="2023-12-06T09:42:23+08:00">2023-12-06</time>
+      <time title="修改時間：2023-12-18 19:33:19" itemprop="dateModified" datetime="2023-12-18T19:33:19+08:00">2023-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1004,98 +1108,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/5f352d9a/" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/22ef0a2a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/about/20230829.jpg">
-      <meta itemprop="name" content="Feng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Feng's blog">
-      <meta itemprop="description" content="部落格">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Feng's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/22ef0a2a/" class="post-title-link" itemprop="url">RESTful API設計風格</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2023-11-28 23:13:02" itemprop="dateCreated datePublished" datetime="2023-11-28T23:13:02+08:00">2023-11-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-12-01 11:20:29" itemprop="dateModified" datetime="2023-12-01T11:20:29+08:00">2023-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/API/" itemprop="url" rel="index"><span itemprop="name">API</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>RESTful API是一種設計風格，設計模式，並不是標準，它可以讓程式語言的API更加易於使用和維護。<br>主要是把每個網址當做<strong>資源Resource</strong>來看，針對同一個資源做不同的HTTP方法之後，會得到不同的結果</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/22ef0a2a/" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>

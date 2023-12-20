@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"thekuen.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="物件導向的特色常常聽到別人說物件導向、物件導向，一直以來都搞不懂，而且在實作的時候不容易察覺到今天就來介紹物件導向的幾個特色  封裝(Encapsulation) 繼承(Inheriitance) 多型(Polymorphism)  封裝(Encapsulation)封裝是，只公開必要的介面，強迫外部的使用者只能透過介面做溝通，隱藏內部的資料或是邏輯，無法干涉也無法看見內部的細節，而不需要了解物件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="物件導向的特色">
+<meta property="og:url" content="http://thekuen.com/posts/4b698999/index.html">
+<meta property="og:site_name" content="Feng&#39;s blog">
+<meta property="og:description" content="物件導向的特色常常聽到別人說物件導向、物件導向，一直以來都搞不懂，而且在實作的時候不容易察覺到今天就來介紹物件導向的幾個特色  封裝(Encapsulation) 繼承(Inheriitance) 多型(Polymorphism)  封裝(Encapsulation)封裝是，只公開必要的介面，強迫外部的使用者只能透過介面做溝通，隱藏內部的資料或是邏輯，無法干涉也無法看見內部的細節，而不需要了解物件">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-12-05T08:22:29.000Z">
+<meta property="article:modified_time" content="2023-12-20T11:16:35.777Z">
+<meta property="article:author" content="Feng">
+<meta property="article:tag" content="ruby on rails">
+<meta property="article:tag" content="OOP">
+<meta property="article:tag" content="ruby">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://thekuen.com/posts/4b698999/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://thekuen.com/posts/4b698999/","path":"posts/4b698999/","title":"物件導向的特色"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>物件導向的特色 | Feng's blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Feng's blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%9A%84%E7%89%B9%E8%89%B2"><span class="nav-number">1.</span> <span class="nav-text">物件導向的特色</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%81%E8%A3%9D-Encapsulation"><span class="nav-number">1.1.</span> <span class="nav-text">封裝(Encapsulation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B9%BC%E6%89%BF-Inheriitance"><span class="nav-number">1.2.</span> <span class="nav-text">繼承(Inheriitance)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%9E%8B-Polymorphism"><span class="nav-number">1.3.</span> <span class="nav-text">多型(Polymorphism)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E8%A4%87%E5%AF%AB%E4%BD%9C%E7%82%BA%E7%AF%84%E4%BE%8B-%E4%BD%BF%E7%94%A8ruby-on-rails"><span class="nav-number">1.3.1.</span> <span class="nav-text">以複寫作為範例(使用ruby on rails)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Feng"
+      src="/about/20230829.jpg">
+  <p class="site-author-name" itemprop="name">Feng</p>
+  <div class="site-description" itemprop="description">部落格</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thekuen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thekuen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:thekuen@gmail.com" title="E-Mail → mailto:thekuen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://thekuen.com/posts/4b698999/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/about/20230829.jpg">
+      <meta itemprop="name" content="Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng's blog">
+      <meta itemprop="description" content="部落格">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="物件導向的特色 | Feng's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          物件導向的特色
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-12-05 16:22:29" itemprop="dateCreated datePublished" datetime="2023-12-05T16:22:29+08:00">2023-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-12-20 19:16:35" itemprop="dateModified" datetime="2023-12-20T19:16:35+08:00">2023-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91OOP/" itemprop="url" rel="index"><span itemprop="name">物件導向OOP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="物件導向的特色"><a href="#物件導向的特色" class="headerlink" title="物件導向的特色"></a>物件導向的特色</h1><p>常常聽到別人說物件導向、物件導向，一直以來都搞不懂，而且在實作的時候不容易察覺到<br>今天就來介紹物件導向的幾個特色</p>
+<ul>
+<li>封裝(Encapsulation)</li>
+<li>繼承(Inheriitance)</li>
+<li>多型(Polymorphism)</li>
+</ul>
+<h2 id="封裝-Encapsulation"><a href="#封裝-Encapsulation" class="headerlink" title="封裝(Encapsulation)"></a>封裝(Encapsulation)</h2><p>封裝是，只公開必要的介面，強迫外部的使用者只能透過介面做溝通，隱藏內部的資料或是邏輯，<br>無法干涉也無法看見內部的細節，而不需要了解物件內部是怎麼運作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Cat</span><br><span class="line">  #initialize可以定義類別屬性</span><br><span class="line">  def initialize(name)</span><br><span class="line">  @name = name</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  #定義一個類別方法，公開的方法，發出聲音的方法，是貓的行為</span><br><span class="line">  def sound</span><br><span class="line">  &quot;meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">#產生一個貓的物件，名字是Lily</span><br><span class="line">cat1 = Cat.new(&quot;Lily&quot;)</span><br><span class="line"></span><br><span class="line">#呼叫公開的方法</span><br><span class="line">puts cat1.sound</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>貓的類別裡面<br>有貓的屬性<br>有一個貓的公開方法sound<br>封裝就是把屬性和方法包裝在一個單元裡面，外部可以透過物件來呼叫這個方法，讓貓發出聲音，但是外部的使用者不知道貓是如何發出的</p>
+<h2 id="繼承-Inheriitance"><a href="#繼承-Inheriitance" class="headerlink" title="繼承(Inheriitance)"></a>繼承(Inheriitance)</h2><p>允許子類別(subclass)可以繼承另一個父類別(superclass)，去繼承父類別的屬性和方法。<br>重複性的類別在父類別上定義，子類別就可以做細節的屬性以及方法，這樣有益於代碼重用和建立結構化的層級。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">  def sound</span><br><span class="line">    puts &quot;Animals can produce sounds&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Cat &lt; Animal</span><br><span class="line">  def speak</span><br><span class="line">    puts &quot;cat meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">cat2 = Cat.new</span><br><span class="line">cat2.speak # cat meow meow</span><br></pre></td></tr></table></figure>
+
+<h2 id="多型-Polymorphism"><a href="#多型-Polymorphism" class="headerlink" title="多型(Polymorphism)"></a>多型(Polymorphism)</h2><p>意思是名稱完全相同的方法，但是根據傳入不同的參數，而有執行不同的動作</p>
+<ol>
+<li><p>多載(Overloading)</p>
+</li>
+<li><p>複寫(Overriding)</p>
+</li>
+</ol>
+<h3 id="以複寫作為範例-使用ruby-on-rails"><a href="#以複寫作為範例-使用ruby-on-rails" class="headerlink" title="以複寫作為範例(使用ruby on rails)"></a>以複寫作為範例(使用ruby on rails)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Animals can produce sounds&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Dog &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Dog howl howl&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Cat &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Cat meow meow&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Pig &lt; Animal</span><br><span class="line">  def sound</span><br><span class="line">    &quot;Pig oink oink&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># 建立動物的陣列</span><br><span class="line">animals = [Dog.new, Cat.new, Pig.new]</span><br><span class="line"></span><br><span class="line"># 讓每種動物發出聲音</span><br><span class="line">animals.each do |animal|</span><br><span class="line">  puts animal.sound</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>建立了一個父類別Animal類別，讓Dog、Cat、Pig都繼承這個父類別<br>接下來，在各個子類別複寫sound方法，更細部描述每種動物的聲音<br>最後產生一個陣列包含不同動物的物件，使用迴圈讓每個動物發出聲音<br>不同類別的物件可以呼叫相同的方法sound，但根據物件的實際類別而執行不同的動作</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ruby-on-rails/" rel="tag"># ruby on rails</a>
+              <a href="/tags/OOP/" rel="tag"># OOP</a>
+              <a href="/tags/ruby/" rel="tag"># ruby</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/b7ca6180/" rel="prev" title="Reference type以及Value type">
+                  <i class="fa fa-angle-left"></i> Reference type以及Value type
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Feng</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
